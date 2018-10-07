@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>【洛谷】P1056【排座椅】 | oierlin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="oierlin,oierlin's blog" />
+  
+  <meta name="description" content="题目链接 因为题目说输入保证会交头接耳的同学前后相邻或者左右相邻，所以一对同学要分开有且只有一条唯一的通道才能把他们分开。 于是可以吧这条通道累加到一个数组里面。应为题目要求纵列的通道和横列的通道条数有限制，所以我们用贪心，将数据存入结构体在根据每一条线隔开的同学对数排序，得出前k条横线和前l条纵线就是要分割的通道。 因为题目要求输出按照$a_i&amp;lt;a_{i+1}$，$b_i&amp;lt;b_{i+">
+<meta name="keywords" content="题解,洛谷">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【洛谷】P1056【排座椅】">
+<meta property="og:url" content="http://yoursite.com/2018/09/02/【洛谷】P1056【排座椅】/index.html">
+<meta property="og:site_name" content="oierlin">
+<meta property="og:description" content="题目链接 因为题目说输入保证会交头接耳的同学前后相邻或者左右相邻，所以一对同学要分开有且只有一条唯一的通道才能把他们分开。 于是可以吧这条通道累加到一个数组里面。应为题目要求纵列的通道和横列的通道条数有限制，所以我们用贪心，将数据存入结构体在根据每一条线隔开的同学对数排序，得出前k条横线和前l条纵线就是要分割的通道。 因为题目要求输出按照$a_i&amp;lt;a_{i+1}$，$b_i&amp;lt;b_{i+">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-07T06:00:28.896Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【洛谷】P1056【排座椅】">
+<meta name="twitter:description" content="题目链接 因为题目说输入保证会交头接耳的同学前后相邻或者左右相邻，所以一对同学要分开有且只有一条唯一的通道才能把他们分开。 于是可以吧这条通道累加到一个数组里面。应为题目要求纵列的通道和横列的通道条数有限制，所以我们用贪心，将数据存入结构体在根据每一条线隔开的同学对数排序，得出前k条横线和前l条纵线就是要分割的通道。 因为题目要求输出按照$a_i&amp;lt;a_{i+1}$，$b_i&amp;lt;b_{i+">
+  
+  
+    <link rel="icon" href="/favicon.jpg">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">oierlin&#39;s blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                    <a  href="/users">
+                        <i class="fa fa-users"></i>
+                        <span>友链</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        oierlin&#39;s blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        我什么也做不到，但是我会努力成为你心目中的英雄。——桐人
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home" target="_blank" href="//oierlin.github.io">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/oierlin">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=827880042&site=qq&menu=yes">
+                            <i class="fa fa-qq fa-2x"></i></a>
+                    
+                        <a title="Email" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=827880042@qq.com">
+                            <i class="fa fa-envelope fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-【洛谷】P1056【排座椅】" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      【洛谷】P1056【排座椅】
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/题解/">题解</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-09-02
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><a href="https://www.luogu.org/problemnew/show/P1056" target="_blank" rel="noopener">题目链接</a></p>
+<p>因为题目说输入保证会交头接耳的同学前后相邻或者左右相邻，所以一对同学要分开有且只有一条唯一的通道才能把他们分开。</p>
+<p>于是可以吧这条通道累加到一个数组里面。应为题目要求纵列的通道和横列的通道条数有限制，所以我们用贪心，将数据存入结构体在根据每一条线隔开的同学对数排序，得出前k条横线和前l条纵线就是要分割的通道。</p>
+<p>因为题目要求输出按照$a_i&lt;a_{i+1}$，$b_i&lt;b_{i+1}$。<br>所以我们在根据$a_i$和$b_i$从小到大排序。</p>
+<p>上代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,k,l,o;</span><br><span class="line"><span class="keyword">int</span> a,b,c,d;</span><br><span class="line"><span class="keyword">int</span> ks[<span class="number">2009</span>],ls[<span class="number">2009</span>];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">aa</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> u,s;</span><br><span class="line">&#125;ans[<span class="number">2009</span>];</span><br><span class="line"><span class="keyword">int</span> lans;</span><br><span class="line"><span class="keyword">int</span> u,mx;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pp</span><span class="params">(aa x,aa y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x.s&gt;y.s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pp1</span><span class="params">(aa x,aa y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x.u&lt;y.u;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d%d"</span>,&amp;n,&amp;m,&amp;k,&amp;l,&amp;o);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=o;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;a,&amp;b,&amp;c,&amp;d);</span><br><span class="line">		<span class="keyword">if</span>(a&gt;c || b&gt;d)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> t;</span><br><span class="line">			t=a;a=c;c=t;</span><br><span class="line">			t=b;b=d;d=t;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(c==a+<span class="number">1</span>) ks[a]++;</span><br><span class="line">		<span class="keyword">if</span>(d==b+<span class="number">1</span>) ls[b]++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;n;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(ks[j]&gt;<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			lans++;</span><br><span class="line">			ans[lans].u=j;</span><br><span class="line">			ans[lans].s=ks[j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(ans+<span class="number">1</span>,ans+lans+<span class="number">1</span>,pp);</span><br><span class="line">	sort(ans+<span class="number">1</span>,ans+k+<span class="number">1</span>,pp1);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=k;j++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,ans[j].u);</span><br><span class="line">	lans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;m;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(ls[j]&gt;<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			lans++;</span><br><span class="line">			ans[lans].u=j;</span><br><span class="line">			ans[lans].s=ls[j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">	sort(ans+<span class="number">1</span>,ans+lans+<span class="number">1</span>,pp);</span><br><span class="line">	sort(ans+<span class="number">1</span>,ans+l+<span class="number">1</span>,pp1);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=l;j++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,ans[j].u);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年10月07日 14:00</p>
+        <p>原始链接： <a class="post-url" href="/2018/09/02/【洛谷】P1056【排座椅】/" title="【洛谷】P1056【排座椅】">http://yoursite.com/2018/09/02/【洛谷】P1056【排座椅】/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.jpg" alt="Lin Jiale">
+                Lin Jiale
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/09/02/【洛谷】P1056【排座椅】/&title=《【洛谷】P1056【排座椅】》 — oierlin&pic=https://i.loli.net/2018/09/30/5bb0120de06f0.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/09/02/【洛谷】P1056【排座椅】/&title=《【洛谷】P1056【排座椅】》 — oierlin&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/09/02/【洛谷】P1056【排座椅】/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【洛谷】P1056【排座椅】》 — oierlin&url=http://yoursite.com/2018/09/02/【洛谷】P1056【排座椅】/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/09/02/【洛谷】P1056【排座椅】/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/09/02/【洛谷】P1056【排座椅】/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/题解/" class="color3">题解</a>
+      
+    <a href="/tags/洛谷/" class="color3">洛谷</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/09/02/抖动文字/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          抖动文字
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/09/02/访客数量统计教学/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">访客数量统计教学</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <div id="SOHUCS" sid="【洛谷】P1056【排座椅】" ></div>
+<script type="text/javascript">
+    (function(){
+        var appid = 'cytQWK7Eb';
+        var conf = 'e7019ac7ab2f3f0a5defd0c4674b9899';
+        var width = window.innerWidth || document.documentElement.clientWidth;
+        if (width < 960) {
+            window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 Lin Jiale<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/game/">game</a><a class="category-link" href="/categories/安利/">安利</a><a class="category-link" href="/categories/宣言/">宣言</a><a class="category-link" href="/categories/教学/">教学</a><a class="category-link" href="/categories/测试/">测试</a><a class="category-link" href="/categories/题解/">题解</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/博客测试/" style="font-size: 10px;">博客测试</a> <a href="/tags/安利/" style="font-size: 10px;">安利</a> <a href="/tags/教学/" style="font-size: 20px;">教学</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/软件/" style="font-size: 10px;">软件</a> <a href="/tags/题解/" style="font-size: 15px;">题解</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/users">
+                    <i class="fa fa-users"></i><span>友链</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/game/" style="font-size: 10px;">game</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/博客测试/" style="font-size: 10px;">博客测试</a> <a href="/tags/安利/" style="font-size: 10px;">安利</a> <a href="/tags/教学/" style="font-size: 20px;">教学</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/软件/" style="font-size: 10px;">软件</a> <a href="/tags/题解/" style="font-size: 15px;">题解</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>

@@ -3,22 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>友链 | oierlin</title>
+  <title>【HDU】3555【Bomb】 | oierlin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="oierlin,oierlin's blog" />
   
-  <meta name="description" content="From BMH memset0（吴与伦）  From XJ pinkex（王昊川） Bartholomew（彭泉泉） yyk（颜弋凯）">
-<meta property="og:type" content="website">
-<meta property="og:title" content="友链">
-<meta property="og:url" content="http://yoursite.com/users/index.html">
+  <meta name="description" content="题目链接 此题题意就是给你T个n，找出n以内的包含49的数的个数。很裸的一题数位dp。直接dp包含49的数的个数有点麻烦，所以我先算出不包含49的数的个数，然后用n+1来减（因为计算不包含49的数中是包括0的，所以减了之后还要加1）。在搜索的过程中记录三个数，l表示当前是第几位，mach表示上一位是否为4，upp表示之前的位数是否都是取最大值，如果之前的数都是取最大值，当前的位只能取0到n的当前位">
+<meta name="keywords" content="题解,HDU">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【HDU】3555【Bomb】">
+<meta property="og:url" content="http://yoursite.com/2018/09/14/【HDU】3555【Bomb】/index.html">
 <meta property="og:site_name" content="oierlin">
-<meta property="og:description" content="From BMH memset0（吴与伦）  From XJ pinkex（王昊川） Bartholomew（彭泉泉） yyk（颜弋凯）">
+<meta property="og:description" content="题目链接 此题题意就是给你T个n，找出n以内的包含49的数的个数。很裸的一题数位dp。直接dp包含49的数的个数有点麻烦，所以我先算出不包含49的数的个数，然后用n+1来减（因为计算不包含49的数中是包括0的，所以减了之后还要加1）。在搜索的过程中记录三个数，l表示当前是第几位，mach表示上一位是否为4，upp表示之前的位数是否都是取最大值，如果之前的数都是取最大值，当前的位只能取0到n的当前位">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-06T07:58:53.315Z">
+<meta property="og:updated_time" content="2018-10-07T06:02:09.775Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="友链">
-<meta name="twitter:description" content="From BMH memset0（吴与伦）  From XJ pinkex（王昊川） Bartholomew（彭泉泉） yyk（颜弋凯）">
+<meta name="twitter:title" content="【HDU】3555【Bomb】">
+<meta name="twitter:description" content="题目链接 此题题意就是给你T个n，找出n以内的包含49的数的个数。很裸的一题数位dp。直接dp包含49的数的个数有点麻烦，所以我先算出不包含49的数的个数，然后用n+1来减（因为计算不包含49的数中是包括0的，所以减了之后还要加1）。在搜索的过程中记录三个数，l表示当前是第几位，mach表示上一位是否为4，upp表示之前的位数是否都是取最大值，如果之前的数都是取最大值，当前的位只能取0到n的当前位">
   
   
     <link rel="icon" href="/favicon.jpg">
@@ -114,20 +115,27 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-【HDU】3555【Bomb】" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      友链
+      【HDU】3555【Bomb】
     </h1>
     <div class="post-title-bar">
       <ul>
           
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/题解/">题解</a>
+                  
+              </li>
+          
         <li>
-          <i class="fa fa-calendar"></i>  2018-09-24
+          <i class="fa fa-calendar"></i>  2018-09-14
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -140,22 +148,16 @@
           
       </header>
     
-    <div class="article-entry " itemprop="articleBody">
+    <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h3 id="From-BMH"><a href="#From-BMH" class="headerlink" title="From BMH"></a>From BMH</h3><ul>
-<li><a href="https://memset0.cn/" target="_blank" rel="noopener">memset0（吴与伦）</a></li>
-</ul>
-<h3 id="From-XJ"><a href="#From-XJ" class="headerlink" title="From XJ"></a>From XJ</h3><ul>
-<li><a href="https://loverchuan.github.io/" target="_blank" rel="noopener">pinkex（王昊川）</a></li>
-<li><a href="https://bartholomew.cf/" target="_blank" rel="noopener">Bartholomew（彭泉泉）</a></li>
-<li><a href="https://yanyikai.github.io/" target="_blank" rel="noopener">yyk（颜弋凯）</a></li>
-</ul>
+            <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3555" target="_blank" rel="noopener">题目链接</a></p>
+<p>此题题意就是给你T个n，找出n以内的包含49的数的个数。<br>很裸的一题数位dp。<br>直接dp包含49的数的个数有点麻烦，所以我先算出不包含49的数的个数，然后用n+1来减（因为计算不包含49的数中是包括0的，所以减了之后还要加1）。<br>在搜索的过程中记录三个数，l表示当前是第几位，mach表示上一位是否为4，upp表示之前的位数是否都是取最大值，如果之前的数都是取最大值，当前的位只能取0到n的当前位，而不是0到9.<br>然后开始搜索，出现连续的49就跳过。<br>dp[j][i]记录第j位时上一位是否为4（i表示）不包含49的数的个数，用记忆化，如果搜过就直接加上。<br>因为上一位是否为4决定了当前位能否为9，对后面数的个数有影响，所以要加一维i。<br>上代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> t;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> n;</span><br><span class="line"><span class="keyword">int</span> l,a[<span class="number">109</span>];</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> dp[<span class="number">109</span>][<span class="number">3</span>];</span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">bool</span> mach,<span class="keyword">bool</span> upp)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(l&lt;=<span class="number">0</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(upp==<span class="number">0</span> &amp;&amp; dp[l][mach]!=<span class="number">-1</span>) <span class="keyword">return</span> dp[l][mach];</span><br><span class="line">	<span class="keyword">int</span> up;</span><br><span class="line">	<span class="keyword">if</span>(upp==<span class="number">1</span>) up=a[l];</span><br><span class="line">	<span class="keyword">else</span> up=<span class="number">9</span>;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> sum=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;=up; j++) &#123;</span><br><span class="line">		<span class="keyword">if</span>(mach==<span class="number">1</span> &amp;&amp; j==<span class="number">9</span>) <span class="keyword">continue</span>;</span><br><span class="line">		sum+=dfs(l<span class="number">-1</span>,j==<span class="number">4</span>,upp==<span class="number">1</span> &amp;&amp; j==up);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(upp==<span class="number">0</span>) dp[l][mach]=sum;</span><br><span class="line">	<span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">ans</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> x)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(x&gt;<span class="number">0</span>) &#123;</span><br><span class="line">		l++;</span><br><span class="line">		a[l]=x%<span class="number">10</span>;</span><br><span class="line">		x/=<span class="number">10</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> dfs(l,<span class="number">0</span>,<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span><br><span class="line">	<span class="built_in">memset</span>(dp,<span class="number">-1</span>,<span class="keyword">sizeof</span>(dp));</span><br><span class="line">	<span class="keyword">while</span>(t--) &#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%lld"</span>,&amp;n);</span><br><span class="line">		l=<span class="number">0</span>;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,n+<span class="number">1</span>-ans(n));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年10月06日 15:58</p>
-        <p>原始链接： <a class="post-url" href="/users/index.html" title="友链">http://yoursite.com/users/index.html</a></p>
+        <p>最后更新： 2018年10月07日 14:02</p>
+        <p>原始链接： <a class="post-url" href="/2018/09/14/【HDU】3555【Bomb】/" title="【HDU】3555【Bomb】">http://yoursite.com/2018/09/14/【HDU】3555【Bomb】/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/images/logo.jpg" alt="Lin Jiale">
@@ -181,7 +183,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/users/&title=《友链》 — oierlin&pic=http://yoursite.comimages/logo.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/09/14/【HDU】3555【Bomb】/&title=《【HDU】3555【Bomb】》 — oierlin&pic=https://i.loli.net/2018/09/28/5bad8c76997c1.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -191,22 +193,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/users/&title=《友链》 — oierlin&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/09/14/【HDU】3555【Bomb】/&title=《【HDU】3555【Bomb】》 — oierlin&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/users/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/09/14/【HDU】3555【Bomb】/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《友链》 — oierlin&url=http://yoursite.com/users/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【HDU】3555【Bomb】》 — oierlin&url=http://yoursite.com/2018/09/14/【HDU】3555【Bomb】/&via=http://yoursite.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/users/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/09/14/【HDU】3555【Bomb】/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -216,7 +218,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/users/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/09/14/【HDU】3555【Bomb】/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -225,6 +227,15 @@
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/题解/" class="color3">题解</a>
+      
+    <a href="/tags/HDU/" class="color4">HDU</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -232,17 +243,31 @@
 </article>
 
 
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#From-BMH"><span class="post-toc-text">From BMH</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#From-XJ"><span class="post-toc-text">From XJ</span></a></li></ol>
-        </nav>
-    </aside>
-    
+
+<nav id="article-nav">
+  
+    <a href="/2018/09/29/Github+Hexo 博客搭建教程/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          Github+Hexo 博客搭建教程
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/09/02/SAO Utils – SAO风格启动菜单/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">SAO Utils – SAO风格启动菜单</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
 
 
 
     
-        <div id="SOHUCS" sid="" ></div>
+        <div id="SOHUCS" sid="【HDU】3555【Bomb】" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cytQWK7Eb';
