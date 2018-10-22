@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>随机图片api | oierlin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="oierlin,oierlin's blog" />
+  
+  <meta name="description" content="什么是随机图片api随机图片api是什么呢？通俗的讲就是当你输入一个网址浏览器时会返回给你不同的图片。其实原理很简单，把你要随机的图片放在一起，然后写一个php，当php被访问时，就随机指向这些图片中的一个返回给浏览器。演示： 教程在制作随机图片之前你得先拥有一个服务器，因为你的php文件需要放在服务器上才能被别人访问。php文件的内容就很简单啦。命名为img.php内容如下：12345&amp;lt;?">
+<meta name="keywords" content="教学,安利">
+<meta property="og:type" content="article">
+<meta property="og:title" content="随机图片api">
+<meta property="og:url" content="http://yoursite.com/2018/10/19/随机图片api/index.html">
+<meta property="og:site_name" content="oierlin">
+<meta property="og:description" content="什么是随机图片api随机图片api是什么呢？通俗的讲就是当你输入一个网址浏览器时会返回给你不同的图片。其实原理很简单，把你要随机的图片放在一起，然后写一个php，当php被访问时，就随机指向这些图片中的一个返回给浏览器。演示： 教程在制作随机图片之前你得先拥有一个服务器，因为你的php文件需要放在服务器上才能被别人访问。php文件的内容就很简单啦。命名为img.php内容如下：12345&amp;lt;?">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://cf.zjqyy.top/img.php">
+<meta property="og:updated_time" content="2018-10-21T11:39:09.532Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="随机图片api">
+<meta name="twitter:description" content="什么是随机图片api随机图片api是什么呢？通俗的讲就是当你输入一个网址浏览器时会返回给你不同的图片。其实原理很简单，把你要随机的图片放在一起，然后写一个php，当php被访问时，就随机指向这些图片中的一个返回给浏览器。演示： 教程在制作随机图片之前你得先拥有一个服务器，因为你的php文件需要放在服务器上才能被别人访问。php文件的内容就很简单啦。命名为img.php内容如下：12345&amp;lt;?">
+<meta name="twitter:image" content="https://cf.zjqyy.top/img.php">
+  
+  
+    <link rel="icon" href="/favicon.jpg">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">oierlin&#39;s blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="https://geek-lin.github.io/home/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                    <a  href="/users">
+                        <i class="fa fa-users"></i>
+                        <span>友链</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        oierlin&#39;s blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        我什么也做不到，但是我会努力成为你心目中的英雄。——桐人
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home" target="_blank" href="//geek-lin.github.io/home/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/oierlin">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=827880042&site=qq&menu=yes">
+                            <i class="fa fa-qq fa-2x"></i></a>
+                    
+                        <a title="Email" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=827880042@qq.com">
+                            <i class="fa fa-envelope fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-随机图片api" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      随机图片api
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/教学/">教学</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-10-19
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="什么是随机图片api"><a href="#什么是随机图片api" class="headerlink" title="什么是随机图片api"></a>什么是随机图片api</h3><p>随机图片api是什么呢？通俗的讲就是当你输入一个网址浏览器时会返回给你不同的图片。<br>其实原理很简单，把你要随机的图片放在一起，然后写一个<code>php</code>，当<code>php</code>被访问时，就随机指向这些图片中的一个返回给浏览器。<br><strong>演示：</strong><br><img src="https://cf.zjqyy.top/img.php" alt=""></p>
+<h3 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h3><p>在制作随机图片之前你得先拥有一个服务器，因为你的<code>php</code>文件需要放在服务器上才能被别人访问。<br><code>php</code>文件的内容就很简单啦。<br>命名为<code>img.php</code><br>内容如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php">$img=file(<span class="string">'img.txt'</span>);</span></span><br><span class="line"><span class="php">$url=array_rand($img);</span></span><br><span class="line"><span class="php">header(<span class="string">"Location:"</span>.$img[$url]);</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>接着把你想要随机的图片上传到一个图床上。（大家想用什么图床都可以，我用的是sm图床）<br>如果你看得懂上面的<code>php</code>代码，那么你肯定知道接下来该怎么做了。<br>在<code>img.php</code>文件的同一目录下新建一个<code>txt</code>文件，命名为<code>img.txt</code>，将你之前上传到图床上的图片的地址放到里面，一个地址一行，你的随机图片就做好了。</p>
+<h3 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h3><p>制作完之后肯定要调用的啦，所以随机图片的地址就是<code>https://你的域名/img.php</code></p>
+<h3 id="我的随机图片api"><a href="#我的随机图片api" class="headerlink" title="我的随机图片api"></a>我的随机图片api</h3><p>教完你们之后就要推广一下我的随机图片啦。<br>由于本蒟蒻是一个从来不氪金的乖孩子（其实是因为我穷），<br>我的api就接在qyy大佬的服务器上了。<br>所以我使用的域名也是他的，不要惊讶啊。<br><code>https://cf.zjqyy.top/img.php</code><br>由于我想把a随机图片运用到背景上面，所以我专门分类了一个背景图片的api：（许多图片的长宽比例不适合作为背景，所以背景随机图片有点少）<br><code>https://cf.zjqyy.top/background/img.php</code><br>图片来源是p站，收集图片耗费了我近三个小时（其实是小飞机不给力，才下载了一百多张图片，毕竟p站是要翻墙的）。<br>图片后续还会增加，可能会有点慢，毕竟爬虫是无法分辨图片质量如何的（其实是我太蒻了不会写爬虫）。<br><strong>如果你有更好的高清图片（一定要高清哦），或者发现我的背景随机图片不适合做背景，请联系我，把网址发给我。</strong></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年10月21日 19:39</p>
+        <p>原始链接： <a class="post-url" href="/2018/10/19/随机图片api/" title="随机图片api">http://yoursite.com/2018/10/19/随机图片api/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.jpg" alt="Lin Jiale">
+                Lin Jiale
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/10/19/随机图片api/&title=《随机图片api》 — oierlin&pic=https://i.loli.net/2018/10/19/5bc9d1e0b5f90.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/10/19/随机图片api/&title=《随机图片api》 — oierlin&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/10/19/随机图片api/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《随机图片api》 — oierlin&url=http://yoursite.com/2018/10/19/随机图片api/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/10/19/随机图片api/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/10/19/随机图片api/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/教学/" class="color3">教学</a>
+      
+    <a href="/tags/安利/" class="color3">安利</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是随机图片api"><span class="post-toc-text">什么是随机图片api</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#教程"><span class="post-toc-text">教程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#调用"><span class="post-toc-text">调用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#我的随机图片api"><span class="post-toc-text">我的随机图片api</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2018/10/19/单页网站/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          单页网站
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/10/08/最安全的聊天工具——Cryptocat/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">最安全的聊天工具——Cryptocat</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+        <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
+    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: 'oierlin',
+            repo: 'oierlin.github.io',
+            oauth: {
+                client_id: '',
+                client_secret: '',
+            },
+        })
+        gitment.render('comments')
+    </script>
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 Lin Jiale<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://yoursite.com",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 0
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/安利/">安利</a><a class="category-link" href="/categories/宣言/">宣言</a><a class="category-link" href="/categories/教学/">教学</a><a class="category-link" href="/categories/测试/">测试</a><a class="category-link" href="/categories/游戏/">游戏</a><a class="category-link" href="/categories/题解/">题解</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/博客测试/" style="font-size: 10px;">博客测试</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 20px;">安利</a> <a href="/tags/教学/" style="font-size: 20px;">教学</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 15px;">题解</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="https://geek-lin.github.io/home/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/users">
+                    <i class="fa fa-users"></i><span>友链</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/博客测试/" style="font-size: 10px;">博客测试</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 20px;">安利</a> <a href="/tags/教学/" style="font-size: 20px;">教学</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 15px;">题解</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
