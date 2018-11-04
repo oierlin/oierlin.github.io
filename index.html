@@ -206,8 +206,8 @@
         </div>
         <div class="article-feed">
             <p>
-                本蒟蒻闲来无事做了两个游戏，请大佬们试玩。有问题请在评论区提出，以便作者后续的更新
-
+                本蒟蒻闲来无事做了两个游戏，请大佬们试玩。有问题请在评论区提出，以便作者后续的更新。
+百度云：
 勇者之路V1.1.1（文字游戏）下载
 
 提取码：w32v
@@ -215,6 +215,14 @@
 驭兽师V1.1.3下载
 
 提取码：xx83
+蓝奏：
+勇者之路V1.1.1（文字游戏）下载
+
+提取码：dvf4
+
+驭兽师V1.1.3下载
+
+提取码：9fs0
 
             </p>
         </div>
@@ -367,9 +375,9 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/安利/" class="color3">安利</a>
-      
     <a href="/tags/教学/" class="color3">教学</a>
+      
+    <a href="/tags/安利/" class="color3">安利</a>
       
   </li>
 
@@ -791,6 +799,23 @@ Sublime Text | 32位 | 64位 (下述文件均用这个软件打开)
       <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
+		<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+			<script>
+				var now = new Date(); 
+				function createtime() { 
+					var grt= new Date("08/10/2018 12:49:00");//此处修改你的建站时间或者网站上线时间 
+					now.setTime(now.getTime()+250); 
+					days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+					hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+					if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+					mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+					seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+					snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+					document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+					document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+				} 
+			setInterval("createtime()",250);
+		</script>
       
 <p>
     <span id="busuanzi_container_site_uv" style='display:none'>
@@ -809,6 +834,11 @@ Sublime Text | 32位 | 64位 (下述文件均用这个软件打开)
       </p>
     </div>
   </div>
+  {% if theme.fireworks %}
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+  {% endif %}
 </footer>
     <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>

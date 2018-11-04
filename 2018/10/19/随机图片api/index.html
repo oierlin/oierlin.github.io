@@ -9,7 +9,7 @@
     <meta name="keywords" content="oierlin,oierlin's blog" />
   
   <meta name="description" content="什么是随机图片api随机图片api是什么呢？通俗的讲就是当你访问一个api时，浏览器会随机返回给你一张图片。其实原理很简单，把你要随机的图片放在一起，然后写一个php，当php被访问时，就随机指向这些图片中的一个返回给浏览器。演示：（刷新一下图片会变哦！） 教程在制作随机图片之前你得先拥有一个服务器，因为你的php文件需要放在服务器上才能被别人访问。php文件的内容就很简单啦。命名为img.php">
-<meta name="keywords" content="安利,教学">
+<meta name="keywords" content="教学,安利">
 <meta property="og:type" content="article">
 <meta property="og:title" content="随机图片api">
 <meta property="og:url" content="http://oierlin.cf/2018/10/19/随机图片api/index.html">
@@ -276,9 +276,9 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/安利/" class="color3">安利</a>
-      
     <a href="/tags/教学/" class="color3">教学</a>
+      
+    <a href="/tags/安利/" class="color3">安利</a>
       
   </li>
 
@@ -325,6 +325,23 @@
       <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
+		<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+			<script>
+				var now = new Date(); 
+				function createtime() { 
+					var grt= new Date("08/10/2018 12:49:00");//此处修改你的建站时间或者网站上线时间 
+					now.setTime(now.getTime()+250); 
+					days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+					hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+					if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+					mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+					seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+					snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+					document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+					document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+				} 
+			setInterval("createtime()",250);
+		</script>
       
 <p>
     <span id="busuanzi_container_site_uv" style='display:none'>
@@ -343,6 +360,11 @@
       </p>
     </div>
   </div>
+  {% if theme.fireworks %}
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+  {% endif %}
 </footer>
     <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
