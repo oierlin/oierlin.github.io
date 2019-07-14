@@ -23,7 +23,7 @@ daovoice('update');
 <meta property="og:description" content="环境配置 Windows32/64 Node.js | 32位 | 64位 Git | 32位 | 64位 Sublime Text | 32位 | 64位 (下述文件均用这个软件打开) 配置环境变量 教程 完成检查: 如果与下述相同就OK了123456789//Windows+R cmdC:\Users\student&amp;gt;node -vv9.9.0C:\Users\student&amp;gt;np">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.loli.net/2018/10/28/5bd5a9de77c53.png">
-<meta property="og:updated_time" content="2018-10-28T12:32:35.882Z">
+<meta property="og:updated_time" content="2019-07-14T11:24:00.434Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github+Hexo 博客搭建教程">
 <meta name="twitter:description" content="环境配置 Windows32/64 Node.js | 32位 | 64位 Git | 32位 | 64位 Sublime Text | 32位 | 64位 (下述文件均用这个软件打开) 配置环境变量 教程 完成检查: 如果与下述相同就OK了123456789//Windows+R cmdC:\Users\student&amp;gt;node -vv9.9.0C:\Users\student&amp;gt;np">
@@ -179,7 +179,7 @@ daovoice('update');
 <p>检查: 最后会显示 INFO Start blogging with Hexo!<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">E:</span>\Blog&gt;hexo install</span><br><span class="line"><span class="comment">//WARN*2</span></span><br><span class="line"><span class="symbol">E:</span>\Blog&gt;hexo g</span><br><span class="line"><span class="symbol">E:</span>\Blog&gt;npm install hexo-deployer-git --save</span><br><span class="line"><span class="comment">//WARN*2</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="连接Hexo—Github-page"><a href="#连接Hexo—Github-page" class="headerlink" title="连接Hexo—Github_page."></a>连接Hexo—Github_page.</h4><p>在根目录下右键,选择Git Bash Here.<br>如果第一次使用,输入<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">student@XJ507011 MINGW32 /e/Blog</span><br><span class="line">$ git<span class="built_in"> config </span>--global user.name <span class="string">"NAME"</span></span><br><span class="line"></span><br><span class="line">student@XJ507011 MINGW32 /e/Blog</span><br><span class="line">$ git<span class="built_in"> config </span>--global user.email <span class="string">"EMAIL"</span></span><br></pre></td></tr></table></figure></p>
 <p>否则什么都不干.<br>接下来输入:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ssh-keygen -t rsa -C <span class="string">"EMAIL"</span></span></span><br><span class="line">//连续三个回车</span><br><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">eval</span> <span class="string">"<span class="variable">$(ssh-agent -s)</span>"</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ssh-add ~/.ssh/id_rsa</span></span><br></pre></td></tr></table></figure></p>
-<p>进入Github,点击头像下的<code>Settings</code>,选择<code>SSH and GPS keys</code>,点击<code>New SSH key</code>.<br><code>Title:</code>任意, <code>Key:</code>.ssh\id-rsa.pub的内容.（默认路径为: C:\Users\Administrator.ssh）<br>检查:<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">student@XJ507011 MINGW32 ~</span><br><span class="line">$ ssh -T git@github.com</span><br><span class="line"><span class="regexp">//</span>如果还有要输入的,回答yes.</span><br><span class="line">Hi yanyikai! Yo<span class="string">u've successfully authenticated, but GitHub does not provide shell access.</span></span><br><span class="line"><span class="string">//只要'</span>Hi<span class="string">'后面是你的NAME,有warning也没关系.</span></span><br></pre></td></tr></table></figure></p>
+<p>进入Github,点击头像下的<code>Settings</code>,选择<code>SSH and GPS keys</code>,点击<code>New SSH key</code>.<br><code>Title:</code>任意, <code>Key:</code>.ssh\id-rsa.pub的内容.（默认路径为: C:\Users\Administrator.ssh）<br>检查:<br><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">student@XJ507011 MINGW32 ~</span><br><span class="line">$ ssh -T git@github.com</span><br><span class="line"><span class="regexp">//</span>如果还有要输入的,回答yes.</span><br><span class="line">Hi oierlin! Yo<span class="string">u've successfully authenticated, but GitHub does not provide shell access.</span></span><br><span class="line"><span class="string">//只要'</span>Hi<span class="string">'后面是你的NAME,有warning也没关系.</span></span><br></pre></td></tr></table></figure></p>
 <p>找到根目录下的<code>_config.yml</code>文件,在文本末尾你会找到<code>deploy:</code>,<br>将其修改成:<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:NAME/NAME.github.io.git</span><br><span class="line">  #or <span class="attribute">repository</span>: <span class="attribute">https</span>:<span class="comment">//github.com/NAME/NAME.github.io.git</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure></p>
 <p><code>repository</code>最好用前者,否则在<code>hexo d -g</code>时有几率出现<code>bash: /dev/tty: No such device or address</code>错误</p>
 <h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E:\<span class="keyword">Blog&gt;hexo </span>d -g</span><br></pre></td></tr></table></figure>
@@ -194,7 +194,7 @@ daovoice('update');
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年10月28日 20:32</p>
+        <p>最后更新： 2019年07月14日 19:24</p>
         <p>原始链接： <a class="post-url" href="/2018/09/29/Github+Hexo 博客搭建教程/" title="Github+Hexo 博客搭建教程">http://oierlin.cf/2018/09/29/Github+Hexo 博客搭建教程/</a></p>
         <footer>
             <a href="http://oierlin.cf">
@@ -332,8 +332,8 @@ daovoice('update');
     </a>
   
   
-    <a href="/2018/09/14/【HDU】3555【Bomb】/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">【HDU】3555【Bomb】</span>
+    <a href="/2018/09/25/LJ语录/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">LJ语录</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
@@ -362,7 +362,7 @@ daovoice('update');
       <p>
         Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
         Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
-      &copy; 2018 Lin Jiale<br>
+      &copy; 2019 Lin Jiale<br>
       </p>
 		<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 			<script>
@@ -416,10 +416,10 @@ daovoice('update');
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/安利/">安利</a><a class="category-link" href="/categories/宣言/">宣言</a><a class="category-link" href="/categories/教学/">教学</a><a class="category-link" href="/categories/测试/">测试</a><a class="category-link" href="/categories/游戏/">游戏</a><a class="category-link" href="/categories/题解/">题解</a>
+            <a class="category-link" href="/categories/安利/">安利</a><a class="category-link" href="/categories/宣言/">宣言</a><a class="category-link" href="/categories/教学/">教学</a><a class="category-link" href="/categories/教程/">教程</a><a class="category-link" href="/categories/杂记/">杂记</a><a class="category-link" href="/categories/游戏/">游戏</a><a class="category-link" href="/categories/题解/">题解</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/博客测试/" style="font-size: 10px;">博客测试</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 20px;">安利</a> <a href="/tags/教学/" style="font-size: 20px;">教学</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 15px;">题解</a>
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 20px;">安利</a> <a href="/tags/教学/" style="font-size: 20px;">教学</a> <a href="/tags/教程/" style="font-size: 10px;">教程</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 15px;">题解</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -458,7 +458,7 @@ daovoice('update');
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/博客测试/" style="font-size: 10px;">博客测试</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 20px;">安利</a> <a href="/tags/教学/" style="font-size: 20px;">教学</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 15px;">题解</a>
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 20px;">安利</a> <a href="/tags/教学/" style="font-size: 20px;">教学</a> <a href="/tags/教程/" style="font-size: 10px;">教程</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 15px;">题解</a>
         </div>
     </div>
 </div>

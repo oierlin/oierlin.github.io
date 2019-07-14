@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0eeeae6f.js","daovoice")
+ daovoice('init', {
+  app_id: "ed1f6dc3"
+});
+daovoice('update');
+ </script>
+<head>
+  <meta charset="utf-8">
+  
+  <title>对话框实现 | oierlin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="oierlin,oierlin's blog" />
+  
+  <meta name="description" content="11-15         我用尽了全力，过着平凡的一生。—— 毛姆          10-22         无论最终的结果是什么，只要这是自己选择的道路。——龙与虎          09-21         不管是哪个时代，都不缺少精力过剩的家伙。——威廉·克梅修          08-30         打架这玩意，不就是为了守护什么东西吗？——银魂      想不想像">
+<meta name="keywords" content="教学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对话框实现">
+<meta property="og:url" content="http://oierlin.cf/2018/09/21/对话框实现/index.html">
+<meta property="og:site_name" content="oierlin">
+<meta property="og:description" content="11-15         我用尽了全力，过着平凡的一生。—— 毛姆          10-22         无论最终的结果是什么，只要这是自己选择的道路。——龙与虎          09-21         不管是哪个时代，都不缺少精力过剩的家伙。——威廉·克梅修          08-30         打架这玩意，不就是为了守护什么东西吗？——银魂      想不想像">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-14T13:12:50.811Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="对话框实现">
+<meta name="twitter:description" content="11-15         我用尽了全力，过着平凡的一生。—— 毛姆          10-22         无论最终的结果是什么，只要这是自己选择的道路。——龙与虎          09-21         不管是哪个时代，都不缺少精力过剩的家伙。——威廉·克梅修          08-30         打架这玩意，不就是为了守护什么东西吗？——银魂      想不想像">
+  
+  
+    <link rel="icon" href="/favicon.jpg">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">oierlin&#39;s blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                    <a  href="/users">
+                        <i class="fa fa-users"></i>
+                        <span>友链</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        oierlin&#39;s blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        我什么也做不到，但是我会努力成为你心目中的英雄。——桐人
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home" target="_blank" href="http://host.oierlin.cf/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="https://github.com/oierlin">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=827880042&site=qq&menu=yes">
+                            <i class="fa fa-qq fa-2x"></i></a>
+                    
+                        <a title="Email" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=827880042@qq.com">
+                            <i class="fa fa-envelope fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-对话框实现" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      对话框实现
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/教学/">教学</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-09-21
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><ul class="cbp_tmtimeline"><br>   <li> <time class="cbp_tmtime"> <span>11-15</span></time><br>    <div class="cbp_tmlabel"><br>     <p>我用尽了全力，过着平凡的一生。—— 毛姆</p><br>    </div> </li><br>   <li> <time class="cbp_tmtime"> <span>10-22</span></time><br>    <div class="cbp_tmlabel"><br>     <p>无论最终的结果是什么，只要这是自己选择的道路。——龙与虎</p><br>    </div> </li><br>   <li> <time class="cbp_tmtime"> <span>09-21</span></time><br>    <div class="cbp_tmlabel"><br>     <p>不管是哪个时代，都不缺少精力过剩的家伙。——威廉·克梅修</p><br>    </div> </li><br>   <li> <time class="cbp_tmtime"> <span>08-30</span></time><br>    <div class="cbp_tmlabel"><br>     <p>打架这玩意，不就是为了守护什么东西吗？——银魂</p><br>    </div> </li><br> </ul><br>想不想像上面那样把自己的句子放到漂亮的对话框中呢？<br>不多说，上代码<br><code>css</code><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span><span class="selector-class">.theme-dark</span> <span class="selector-class">.cbp_tmtimeline</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">RGBA</span>(255, 255, 255, 0.06);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span><span class="selector-class">.cbp_tmtimeline</span> &#123;</span><br><span class="line"><span class="attribute">padding</span>:<span class="number">0</span>;</span><br><span class="line">&#125;   </span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">class</span><span class="selector-class">.cdp_tmlabel</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmlabel</span> &#123;</span><br><span class="line"><span class="attribute">margin-bottom</span>:<span class="number">0</span>;</span><br><span class="line">&#125; </span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &#123;</span><br><span class="line"><span class="attribute">margin</span>: <span class="number">30px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line"><span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line"><span class="attribute">list-style</span>: none;</span><br><span class="line"><span class="attribute">position</span>: relative;</span><br><span class="line">&#125; </span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line"><span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line"><span class="attribute">position</span>: absolute;</span><br><span class="line"><span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line"><span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">4px</span>;</span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">RGBA</span>(0, 0, 0, 0.02);</span><br><span class="line"><span class="attribute">left</span>: <span class="number">80px</span>;</span><br><span class="line"><span class="attribute">margin-left</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmtime</span> &#123;</span><br><span class="line"><span class="attribute">display</span>: block;</span><br><span class="line"><span class="attribute">max-width</span>:<span class="number">70px</span>;</span><br><span class="line"><span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmtime</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line"><span class="attribute">display</span>: block;</span><br><span class="line"><span class="attribute">text-align</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmtime</span> <span class="selector-tag">span</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">0.9em</span>;</span><br><span class="line"><span class="attribute">color</span>: <span class="number">#bdd0db</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmtime</span> <span class="selector-tag">span</span><span class="selector-pseudo">:last-child</span> &#123;</span><br><span class="line"><span class="attribute">font-size</span>: <span class="number">1.2em</span>;</span><br><span class="line"><span class="attribute">color</span>: <span class="number">#9BCD9B</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(odd)</span> <span class="selector-class">.cbp_tmtime</span> <span class="selector-tag">span</span><span class="selector-pseudo">:last-child</span> &#123;</span><br><span class="line"><span class="attribute">color</span>: <span class="built_in">RGBA</span>(255, 125, 73, 0.75);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.cbp_tmlabel</span> &gt; <span class="selector-tag">p</span> &#123;</span><br><span class="line"><span class="attribute">margin-bottom</span>:<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmlabel</span> &#123;</span><br><span class="line"><span class="attribute">margin</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">45px</span> <span class="number">120px</span>;</span><br><span class="line"><span class="attribute">background</span>: <span class="number">#9BCD9B</span>;</span><br><span class="line"><span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line"><span class="attribute">padding</span>: <span class="number">1.5em</span>;</span><br><span class="line"><span class="attribute">font-weight</span>: <span class="number">300</span>;</span><br><span class="line"><span class="attribute">line-height</span>: <span class="number">1.4</span>;</span><br><span class="line"><span class="attribute">position</span>: relative;</span><br><span class="line"><span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">transition</span>: all <span class="number">0.3s</span> ease <span class="number">0s</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(0,0,0,0.15);</span><br><span class="line"><span class="attribute">cursor</span>:pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmlabel</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-3px);</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">-webkit-box-shadow</span>:<span class="number">0</span> <span class="number">15px</span> <span class="number">32px</span> <span class="built_in">rgba</span>(0,0,0,0.15) <span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(odd)</span> <span class="selector-class">.cbp_tmlabel</span> &#123;</span><br><span class="line"><span class="attribute">background</span>: <span class="built_in">RGBA</span>(255, 125, 73, 0.75);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmlabel</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line"><span class="attribute">right</span>: <span class="number">100%</span>;</span><br><span class="line"><span class="attribute">border</span>: solid transparent;</span><br><span class="line"><span class="attribute">content</span>: <span class="string">" "</span>;</span><br><span class="line"><span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line"><span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line"><span class="attribute">position</span>: absolute;</span><br><span class="line"><span class="attribute">pointer-events</span>: none;</span><br><span class="line"><span class="attribute">border-right-color</span>: <span class="number">#9BCD9B</span>;</span><br><span class="line"><span class="attribute">border-width</span>: <span class="number">10px</span>;</span><br><span class="line"><span class="attribute">top</span>: <span class="number">4px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(odd)</span> <span class="selector-class">.cbp_tmlabel</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line"><span class="attribute">border-right-color</span>: <span class="built_in">RGBA</span>(255, 125, 73, 0.75);</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">65.375em</span>) &#123;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmtime</span> <span class="selector-tag">span</span><span class="selector-pseudo">:last-child</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">1.2em</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">47.2em</span>) &#123;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmtime</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">20px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmtime</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">text-align</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmlabel</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">30px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">400</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">95%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmlabel</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">right</span>: auto;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">border-right-color</span>: transparent;</span><br><span class="line">    <span class="attribute">border-bottom-color</span>: <span class="number">#9BCD9B</span>;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span><span class="selector-pseudo">:nth-child(odd)</span> <span class="selector-class">.cbp_tmlabel</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">border-right-color</span>: transparent;</span><br><span class="line">    <span class="attribute">border-bottom-color</span>: <span class="built_in">RGBA</span>(255, 125, 73, 0.75);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.cbp_tmtimeline</span> &gt; <span class="selector-tag">li</span> <span class="selector-class">.cbp_tmicon</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">float</span>: right;</span><br><span class="line">    <span class="attribute">left</span>: auto;</span><br><span class="line">    <span class="attribute">margin</span>: -<span class="number">55px</span> <span class="number">5px</span> <span class="number">0</span> <span class="number">0px</span>;</span><br><span class="line">&#125;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上传好css代码后调用方式如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul <span class="class"><span class="keyword">class</span></span>=<span class="string">"cbp_tmtimeline"</span>&gt; </span><br><span class="line">   &lt;li&gt; <span class="xml"><span class="tag">&lt;<span class="name">time</span> <span class="attr">class</span>=<span class="string">"cbp_tmtime"</span>&gt;</span> <span class="tag">&lt;<span class="name">span</span>&gt;</span>11-15<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">time</span>&gt;</span></span> </span><br><span class="line">    &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"cbp_tmlabel"</span>&gt; </span><br><span class="line">     &lt;p&gt;我用尽了全力，过着平凡的一生。—— 毛姆&lt;<span class="regexp">/p&gt; </span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt; <span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"> &lt;<span class="regexp">/ul&gt;</span></span><br></pre></td></tr></table></figure></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年07月14日 21:12</p>
+        <p>原始链接： <a class="post-url" href="/2018/09/21/对话框实现/" title="对话框实现">http://oierlin.cf/2018/09/21/对话框实现/</a></p>
+        <footer>
+            <a href="http://oierlin.cf">
+                <img src="/images/logo.jpg" alt="Lin Jiale">
+                Lin Jiale
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://oierlin.cf/2018/09/21/对话框实现/&title=《对话框实现》 — oierlin&pic=https://i.loli.net/2019/07/14/5d2b2a0a9a3a218809.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://oierlin.cf/2018/09/21/对话框实现/&title=《对话框实现》 — oierlin&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://oierlin.cf/2018/09/21/对话框实现/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《对话框实现》 — oierlin&url=http://oierlin.cf/2018/09/21/对话框实现/&via=http://oierlin.cf" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://oierlin.cf/2018/09/21/对话框实现/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://oierlin.cf/2018/09/21/对话框实现/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/教学/" class="color3">教学</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/09/24/页面摧毁游戏/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          页面摧毁游戏
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2018/09/19/一个很NB的404页面/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">一个很NB的404页面</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2019 Lin Jiale<br>
+      </p>
+		<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+			<script>
+				var now = new Date(); 
+				function createtime() { 
+					var grt= new Date("08/10/2018 12:49:00");//此处修改你的建站时间或者网站上线时间 
+					now.setTime(now.getTime()+250); 
+					days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+					hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+					if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+					mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+					seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+					snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+					document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+					document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+				} 
+			setInterval("createtime()",250);
+		</script>
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+  </div>
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://oierlin.cf",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/安利/">安利</a><a class="category-link" href="/categories/宣言/">宣言</a><a class="category-link" href="/categories/教学/">教学</a><a class="category-link" href="/categories/教程/">教程</a><a class="category-link" href="/categories/杂记/">杂记</a><a class="category-link" href="/categories/游戏/">游戏</a><a class="category-link" href="/categories/题解/">题解</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 20px;">安利</a> <a href="/tags/教学/" style="font-size: 20px;">教学</a> <a href="/tags/教程/" style="font-size: 10px;">教程</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 15px;">题解</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/users">
+                    <i class="fa fa-users"></i><span>友链</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 20px;">安利</a> <a href="/tags/教学/" style="font-size: 20px;">教学</a> <a href="/tags/教程/" style="font-size: 10px;">教程</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 15px;">题解</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
