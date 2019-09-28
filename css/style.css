@@ -3077,11 +3077,13 @@ pre .javascript .function {
 /*外来*/
 /*鼠标样式*/
 /*普通指针样式*/
-body{
-cursor: url(https://i.loli.net/2017/08/19/5997836b66d58.png), default;
+body {
+  cursor: url("https://i.loli.net/2017/08/19/5997836b66d58.png"), default;
 }
 /*链接指针样式*/
-a:hover{cursor: url(https://i.loli.net/2017/08/19/599783800335d.png), pointer;}
+a:hover {
+  cursor: url("https://i.loli.net/2017/08/19/599783800335d.png"), pointer;
+}
 /*友链美化*/
 .friends {
   display: -webkit-box;
