@@ -9,23 +9,25 @@ daovoice('update');
 <head>
   <meta charset="utf-8">
   
-  <title>【洛谷】P1056【排座椅】 | oierlin</title>
+  <title>【洛谷】P1056【排座椅】 | Oblivion</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    <meta name="keywords" content="oierlin,oierlin's blog" />
+    <meta name="keywords" content="Oblivion,Oblivion's blog" />
   
-  <meta name="description" content="题目链接 因为题目说输入保证会交头接耳的同学前后相邻或者左右相邻，所以一对同学要分开有且只有一条唯一的通道才能把他们分开。 于是可以吧这条通道累加到一个数组里面。应为题目要求纵列的通道和横列的通道条数有限制，所以我们用贪心，将数据存入结构体在根据每一条线隔开的同学对数排序，得出前k条横线和前l条纵线就是要分割的通道。 因为题目要求输出按照$a_i&amp;lt;a_{i+1}$，$b_i&amp;lt;b_{i+">
+  <meta name="description" content="题目链接 P1056 排座椅题目描述上课的时候总会有一些同学和前后左右的人交头接耳，这是令小学班主任十分头疼的一件事情。不过，班主任小雪发现了一些有趣的现象，当同学们的座次确定下来之后，只有有限的D对同学上课时会交头接耳。 同学们在教室中坐成了$M$行$N$列，坐在第$i$行第$j$列的同学的位置是$(i,j)$，为了方便同学们进出，在教室中设置了$K$条横向的通道，$L$条纵向的通道。 于是，聪">
 <meta name="keywords" content="题解,洛谷">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【洛谷】P1056【排座椅】">
 <meta property="og:url" content="http://oierlin.cf/2018/09/02/【洛谷】P1056【排座椅】/index.html">
-<meta property="og:site_name" content="oierlin">
-<meta property="og:description" content="题目链接 因为题目说输入保证会交头接耳的同学前后相邻或者左右相邻，所以一对同学要分开有且只有一条唯一的通道才能把他们分开。 于是可以吧这条通道累加到一个数组里面。应为题目要求纵列的通道和横列的通道条数有限制，所以我们用贪心，将数据存入结构体在根据每一条线隔开的同学对数排序，得出前k条横线和前l条纵线就是要分割的通道。 因为题目要求输出按照$a_i&amp;lt;a_{i+1}$，$b_i&amp;lt;b_{i+">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-07T06:00:28.896Z">
+<meta property="og:site_name" content="Oblivion">
+<meta property="og:description" content="题目链接 P1056 排座椅题目描述上课的时候总会有一些同学和前后左右的人交头接耳，这是令小学班主任十分头疼的一件事情。不过，班主任小雪发现了一些有趣的现象，当同学们的座次确定下来之后，只有有限的D对同学上课时会交头接耳。 同学们在教室中坐成了$M$行$N$列，坐在第$i$行第$j$列的同学的位置是$(i,j)$，为了方便同学们进出，在教室中设置了$K$条横向的通道，$L$条纵向的通道。 于是，聪">
+<meta property="og:locale" content="ch">
+<meta property="og:image" content="https://cdn.luogu.org/upload/pic/20.png">
+<meta property="og:updated_time" content="2019-09-27T11:15:58.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【洛谷】P1056【排座椅】">
-<meta name="twitter:description" content="题目链接 因为题目说输入保证会交头接耳的同学前后相邻或者左右相邻，所以一对同学要分开有且只有一条唯一的通道才能把他们分开。 于是可以吧这条通道累加到一个数组里面。应为题目要求纵列的通道和横列的通道条数有限制，所以我们用贪心，将数据存入结构体在根据每一条线隔开的同学对数排序，得出前k条横线和前l条纵线就是要分割的通道。 因为题目要求输出按照$a_i&amp;lt;a_{i+1}$，$b_i&amp;lt;b_{i+">
+<meta name="twitter:description" content="题目链接 P1056 排座椅题目描述上课的时候总会有一些同学和前后左右的人交头接耳，这是令小学班主任十分头疼的一件事情。不过，班主任小雪发现了一些有趣的现象，当同学们的座次确定下来之后，只有有限的D对同学上课时会交头接耳。 同学们在教室中坐成了$M$行$N$列，坐在第$i$行第$j$列的同学的位置是$(i,j)$，为了方便同学们进出，在教室中设置了$K$条横向的通道，$L$条纵向的通道。 于是，聪">
+<meta name="twitter:image" content="https://cdn.luogu.org/upload/pic/20.png">
   
   
     <link rel="icon" href="/favicon.jpg">
@@ -48,7 +50,7 @@ daovoice('update');
         <div id="header-menu" class="header-menu-pos animated">
             <div class="header-menu-container">
                 <a href="/" class="left">
-                    <span class="site-title">oierlin&#39;s blog</span>
+                    <span class="site-title">Oblivion&#39;s blog</span>
                 </a>
                 <nav id="header-menu-nav" class="right">
                     
@@ -88,7 +90,7 @@ daovoice('update');
                 <div id="header-title">
                     
                     <h2>
-                        oierlin&#39;s blog
+                        Oblivion&#39;s blog
                     </h2>
                     
                 </div>
@@ -158,14 +160,23 @@ daovoice('update');
       
             
             <p><a href="https://www.luogu.org/problemnew/show/P1056" target="_blank" rel="noopener">题目链接</a></p>
-<p>因为题目说输入保证会交头接耳的同学前后相邻或者左右相邻，所以一对同学要分开有且只有一条唯一的通道才能把他们分开。</p>
+<h3 id="P1056-排座椅"><a href="#P1056-排座椅" class="headerlink" title="P1056 排座椅"></a>P1056 排座椅</h3><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>上课的时候总会有一些同学和前后左右的人交头接耳，这是令小学班主任十分头疼的一件事情。不过，班主任小雪发现了一些有趣的现象，当同学们的座次确定下来之后，只有有限的D对同学上课时会交头接耳。</p>
+<p>同学们在教室中坐成了$M$行$N$列，坐在第$i$行第$j$列的同学的位置是$(i,j)$，为了方便同学们进出，在教室中设置了$K$条横向的通道，$L$条纵向的通道。</p>
+<p>于是，聪明的小雪想到了一个办法，或许可以减少上课时学生交头接耳的问题：她打算重新摆放桌椅，改变同学们桌椅间通道的位置，因为如果一条通道隔开了$2$个会交头接耳的同学，那么他们就不会交头接耳了。</p>
+<p>请你帮忙给小雪编写一个程序，给出最好的通道划分方案。在该方案下，上课时交头接耳的学生的对数最少。</p>
+<h4 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h4><h5 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h5><p>第一行，有$5$个用空格隔开的整数，分别是$M,N,K,L,D(2 \le N,M \le 1000,0 \le K&lt;M,0 \le L&lt;N,D \le 2000)$<br>接下来的$D$行，每行有$4$个用空格隔开的整数。第$i$行的$4$个整数$X_i,Y_i,P_i,Q_i$，表示坐在位置$(X_i,Y_i)$与$(P_i,Q_i)$的两个同学会交头接耳（输入保证他们前后相邻或者左右相邻）。</p>
+<h5 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h5><p>共两行。<br>第一行包含$K$个整数$a_1,a_2,…,a_K$，表示第$a_1$行和$a_1+1$行之间、第$a-2$行和$a_2+1$行之间、…、第$a_K$行和第$a_K+1$行之间要开辟通道，其中$a_i&lt; a_i+1$，每两个整数之间用空格隔开（行尾没有空格）。<br>第二行包含$L$个整数$b_1,b_2,…,b_L$，表示第$b_1$列和$b_1+1$列之间、第$b_2$列和$b_2+1$列之间、…、第$b_L$列和第$b_L+1$列之间要开辟通道，其中$b_i&lt; b_i+1$，每两个整数之间用空格隔开（列尾没有空格）。</p>
+<h4 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h4><h5 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例#1："></a>输入样例#1：</h5><p><pre>4 5 1 2 3<br>4 2 4 3<br>2 3 3 3<br>2 5 2 4<br></pre></p>
+<h5 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例#1："></a>输出样例#1：</h5><p><pre>2<br>2 4<br></pre></p>
+<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p><img src="https://cdn.luogu.org/upload/pic/20.png" alt=""><br>上图中用符号*、※、+标出了33对会交头接耳的学生的位置，图中33条粗线的位置表示通道，图示的通道划分方案是唯一的最佳方案。<br>2008年普及组第二题</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>因为题目说输入保证会交头接耳的同学前后相邻或者左右相邻，所以一对同学要分开有且只有一条唯一的通道才能把他们分开。</p>
 <p>于是可以吧这条通道累加到一个数组里面。应为题目要求纵列的通道和横列的通道条数有限制，所以我们用贪心，将数据存入结构体在根据每一条线隔开的同学对数排序，得出前k条横线和前l条纵线就是要分割的通道。</p>
 <p>因为题目要求输出按照$a_i&lt;a_{i+1}$，$b_i&lt;b_{i+1}$。<br>所以我们在根据$a_i$和$b_i$从小到大排序。</p>
 <p>上代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,k,l,o;</span><br><span class="line"><span class="keyword">int</span> a,b,c,d;</span><br><span class="line"><span class="keyword">int</span> ks[<span class="number">2009</span>],ls[<span class="number">2009</span>];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">aa</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> u,s;</span><br><span class="line">&#125;ans[<span class="number">2009</span>];</span><br><span class="line"><span class="keyword">int</span> lans;</span><br><span class="line"><span class="keyword">int</span> u,mx;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pp</span><span class="params">(aa x,aa y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x.s&gt;y.s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pp1</span><span class="params">(aa x,aa y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x.u&lt;y.u;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d%d"</span>,&amp;n,&amp;m,&amp;k,&amp;l,&amp;o);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=o;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>,&amp;a,&amp;b,&amp;c,&amp;d);</span><br><span class="line">		<span class="keyword">if</span>(a&gt;c || b&gt;d)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> t;</span><br><span class="line">			t=a;a=c;c=t;</span><br><span class="line">			t=b;b=d;d=t;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(c==a+<span class="number">1</span>) ks[a]++;</span><br><span class="line">		<span class="keyword">if</span>(d==b+<span class="number">1</span>) ls[b]++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;n;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(ks[j]&gt;<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			lans++;</span><br><span class="line">			ans[lans].u=j;</span><br><span class="line">			ans[lans].s=ks[j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	sort(ans+<span class="number">1</span>,ans+lans+<span class="number">1</span>,pp);</span><br><span class="line">	sort(ans+<span class="number">1</span>,ans+k+<span class="number">1</span>,pp1);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=k;j++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,ans[j].u);</span><br><span class="line">	lans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;m;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(ls[j]&gt;<span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			lans++;</span><br><span class="line">			ans[lans].u=j;</span><br><span class="line">			ans[lans].s=ls[j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">	sort(ans+<span class="number">1</span>,ans+lans+<span class="number">1</span>,pp);</span><br><span class="line">	sort(ans+<span class="number">1</span>,ans+l+<span class="number">1</span>,pp1);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=l;j++)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,ans[j].u);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年10月07日 14:00</p>
+        <p>最后更新： 2019年09月27日 19:15</p>
         <p>原始链接： <a class="post-url" href="/2018/09/02/【洛谷】P1056【排座椅】/" title="【洛谷】P1056【排座椅】">http://oierlin.cf/2018/09/02/【洛谷】P1056【排座椅】/</a></p>
         <footer>
             <a href="http://oierlin.cf">
@@ -223,7 +234,7 @@ daovoice('update');
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://oierlin.cf/2018/09/02/【洛谷】P1056【排座椅】/&title=《【洛谷】P1056【排座椅】》 — oierlin&pic=https://i.loli.net/2018/09/30/5bb0120de06f0.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://oierlin.cf/2018/09/02/【洛谷】P1056【排座椅】/&title=《【洛谷】P1056【排座椅】》 — Oblivion&pic=https://i.loli.net/2018/09/30/5bb0120de06f0.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -233,7 +244,7 @@ daovoice('update');
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://oierlin.cf/2018/09/02/【洛谷】P1056【排座椅】/&title=《【洛谷】P1056【排座椅】》 — oierlin&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://oierlin.cf/2018/09/02/【洛谷】P1056【排座椅】/&title=《【洛谷】P1056【排座椅】》 — Oblivion&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
@@ -243,7 +254,7 @@ daovoice('update');
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【洛谷】P1056【排座椅】》 — oierlin&url=http://oierlin.cf/2018/09/02/【洛谷】P1056【排座椅】/&via=http://oierlin.cf" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【洛谷】P1056【排座椅】》 — Oblivion&url=http://oierlin.cf/2018/09/02/【洛谷】P1056【排座椅】/&via=http://oierlin.cf" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -283,6 +294,12 @@ daovoice('update');
 </article>
 
 
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#P1056-排座椅"><span class="post-toc-text">P1056 排座椅</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题目描述"><span class="post-toc-text">题目描述</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#输入输出格式"><span class="post-toc-text">输入输出格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#输入格式："><span class="post-toc-text">输入格式：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#输出格式："><span class="post-toc-text">输出格式：</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#输入输出样例"><span class="post-toc-text">输入输出样例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#输入样例-1："><span class="post-toc-text">输入样例#1：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#输出样例-1："><span class="post-toc-text">输出样例#1：</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#说明"><span class="post-toc-text">说明</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题解"><span class="post-toc-text">题解</span></a></li></ol>
+        </nav>
+    </aside>
+    
 
 <nav id="article-nav">
   
@@ -307,22 +324,24 @@ daovoice('update');
 
 
     
-        <link rel="stylesheet" href="//unpkg.com/gitment/style/default.css">
-    <script src="//unpkg.com/gitment/dist/gitment.browser.js"></script>
-    <script>
-        var gitment = new Gitment({
-            owner: 'oierlin',
-            repo: 'gitment',
-            oauth: {
-                client_id: '5e4ad8e9d0569627eac0',
-                client_secret: '82700a63b69cf4686cfa8062ec4b5f1dbd1b332f',
-            },
-        })
-        gitment.render('comments')
-    </script>
+<!-- ������City�氲װ���� -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NTM1OS8yMTg3Mg==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
-    
-</section>
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>Ϊ����ʹ�����������۹����뼤��JavaScript</noscript>
+</div>
+<!-- City�氲װ��������� --></section>
         
       </div>
       <footer id="footer">
@@ -396,10 +415,10 @@ daovoice('update');
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/安利/">安利</a><a class="category-link" href="/categories/宣言/">宣言</a><a class="category-link" href="/categories/教学/">教学</a><a class="category-link" href="/categories/教程/">教程</a><a class="category-link" href="/categories/杂记/">杂记</a><a class="category-link" href="/categories/游戏/">游戏</a><a class="category-link" href="/categories/题解/">题解</a>
+            <a class="category-link" href="/categories/安利/">安利</a><a class="category-link" href="/categories/宣言/">宣言</a><a class="category-link" href="/categories/教学/">教学</a><a class="category-link" href="/categories/杂记/">杂记</a><a class="category-link" href="/categories/游戏/">游戏</a><a class="category-link" href="/categories/题解/">题解</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 20px;">安利</a> <a href="/tags/教学/" style="font-size: 20px;">教学</a> <a href="/tags/教程/" style="font-size: 10px;">教程</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 15px;">题解</a>
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 12.5px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 17.5px;">安利</a> <a href="/tags/教学/" style="font-size: 15px;">教学</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 12.5px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -438,7 +457,7 @@ daovoice('update');
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 20px;">安利</a> <a href="/tags/教学/" style="font-size: 20px;">教学</a> <a href="/tags/教程/" style="font-size: 10px;">教程</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 15px;">题解</a>
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 12.5px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 17.5px;">安利</a> <a href="/tags/教学/" style="font-size: 15px;">教学</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 12.5px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
         </div>
     </div>
 </div>

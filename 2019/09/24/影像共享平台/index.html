@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0eeeae6f.js","daovoice")
+ daovoice('init', {
+  app_id: "ed1f6dc3"
+});
+daovoice('update');
+ </script>
+<head>
+  <meta charset="utf-8">
+  
+  <title>影像共享平台 | Oblivion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Oblivion,Oblivion's blog" />
+  
+  <meta name="description" content="目标搭建一个支持图片分享以及部分用户图片上传的网站。 起因近期一位稍微比我富裕那么一点的巨佬Algha_Porthos，由于要满足Image Sharing Platform（影像共享平台）的需求，现将Algha_Porthos，Oblivion，joefang三人组成技术支持组，进行网站的设计工程。 介绍目的：希望建立平台以共享已经公开却难以找到获得途径的照片，并且给希望公开照片的人一个平台。">
+<meta name="keywords" content="安利,网站">
+<meta property="og:type" content="article">
+<meta property="og:title" content="影像共享平台">
+<meta property="og:url" content="http://oierlin.cf/2019/09/24/影像共享平台/index.html">
+<meta property="og:site_name" content="Oblivion">
+<meta property="og:description" content="目标搭建一个支持图片分享以及部分用户图片上传的网站。 起因近期一位稍微比我富裕那么一点的巨佬Algha_Porthos，由于要满足Image Sharing Platform（影像共享平台）的需求，现将Algha_Porthos，Oblivion，joefang三人组成技术支持组，进行网站的设计工程。 介绍目的：希望建立平台以共享已经公开却难以找到获得途径的照片，并且给希望公开照片的人一个平台。">
+<meta property="og:locale" content="ch">
+<meta property="og:updated_time" content="2019-09-27T12:37:45.001Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="影像共享平台">
+<meta name="twitter:description" content="目标搭建一个支持图片分享以及部分用户图片上传的网站。 起因近期一位稍微比我富裕那么一点的巨佬Algha_Porthos，由于要满足Image Sharing Platform（影像共享平台）的需求，现将Algha_Porthos，Oblivion，joefang三人组成技术支持组，进行网站的设计工程。 介绍目的：希望建立平台以共享已经公开却难以找到获得途径的照片，并且给希望公开照片的人一个平台。">
+  
+  
+    <link rel="icon" href="/favicon.jpg">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Oblivion&#39;s blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                    <a  href="/users">
+                        <i class="fa fa-users"></i>
+                        <span>友链</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Oblivion&#39;s blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        我什么也做不到，但是我会努力成为你心目中的英雄。——桐人
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home" target="_blank" href="http://home.oierlin.cf/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="https://github.com/oierlin">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=827880042&site=qq&menu=yes">
+                            <i class="fa fa-qq fa-2x"></i></a>
+                    
+                        <a title="Email" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=827880042@qq.com">
+                            <i class="fa fa-envelope fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-影像共享平台" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      影像共享平台
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/安利/">安利</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-09-24
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>搭建一个支持图片分享以及部分用户图片上传的网站。</p>
+<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>近期一位稍微比我富裕那么一点的巨佬Algha_Porthos，由于要满足Image Sharing Platform（影像共享平台）的需求，现将Algha_Porthos，Oblivion，joefang三人组成技术支持组，进行网站的设计工程。</p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><h4 id="目的："><a href="#目的：" class="headerlink" title="目的："></a>目的：</h4><p>希望建立平台以共享已经公开却难以找到获得途径的照片，并且给希望公开照片的人一个平台。</p>
+<h4 id="平台基本性质："><a href="#平台基本性质：" class="headerlink" title="平台基本性质："></a>平台基本性质：</h4><p>本平台将会是一个基于互联网的影像共享平台，将实现用户不同权限、实时可访问、下载、持权上传影像（在保证安全后，可能拓展到所有文件）。目前计划在7年内保持正常运营。服务器是阿里云学生机，我们将以云盘或者图床为基础进行权限设置。</p>
+<h4 id="服务器的性能："><a href="#服务器的性能：" class="headerlink" title="服务器的性能："></a>服务器的性能：</h4><pre><code>镜像系统：Windows 2012 R2
+流量：1000GB
+CPU：一核
+内存：2GB
+系统盘：40GB
+</code></pre><h4 id="用户权限设置："><a href="#用户权限设置：" class="headerlink" title="用户权限设置："></a>用户权限设置：</h4><p>目前计划分为3~4个等级如下：</p>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>访问方式</th>
+<th>上传权限</th>
+<th>下载权限</th>
+<th>用户授权权限</th>
+<th>紧急关站</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Owner</td>
+<td>账号+密码</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+<td>有</td>
+</tr>
+<tr>
+<td>Administrator</td>
+<td>账号+密码</td>
+<td>有</td>
+<td>有</td>
+<td>对等级低者有</td>
+<td>无</td>
+</tr>
+<tr>
+<td>User</td>
+<td>账号+密码</td>
+<td>联系有权限者帮忙上传</td>
+<td>有</td>
+<td>无</td>
+<td>无</td>
+</tr>
+<tr>
+<td>Tourist（可无）</td>
+<td>公共账号</td>
+<td>无</td>
+<td>限速下载部分文件</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+<h4 id="资金来源"><a href="#资金来源" class="headerlink" title="资金来源"></a>资金来源</h4><p>初期测试资金全部由Algha_Porthos承担，后期维护服务器的资金以Algha_Porthos为主，博主和joefang也会承担一部分资金，当然欢迎各位用户对本项目进行赞助，我们也会设置关于赞助的致谢名单，也可以应赞助者的要求在网站上添加友链。</p>
+<h3 id="项目调试日志"><a href="#项目调试日志" class="headerlink" title="项目调试日志"></a>项目调试日志</h3><h4 id="理论阶段"><a href="#理论阶段" class="headerlink" title="理论阶段"></a>理论阶段</h4><p>日期：2019-9-16到2019-9-22<br>确定需求，选择需要购买的服务器以及讨论如何实现需求。</p>
+<h4 id="测试阶段"><a href="#测试阶段" class="headerlink" title="测试阶段"></a>测试阶段</h4><h5 id="No1-极简网盘"><a href="#No1-极简网盘" class="headerlink" title="No1.极简网盘"></a>No1.极简网盘</h5><p>日期：2019-9-23<br>支持文件上传的后缀限制。<br>支持用户权限设置，分为user，admin，superadmin三种权限。<br>支持多语言，包括中文，英文，日文。<br>暂时因为邮箱验证原因不支持用户注册，只能后台注册用户。</p>
+<h5 id="No2-云存储个人网盘"><a href="#No2-云存储个人网盘" class="headerlink" title="No2.云存储个人网盘"></a>No2.云存储个人网盘</h5><p>日期：2019-9-25<br>支持所有文件上传以及分享。<br>支持用户任意注册。<br>不支持权限设置。</p>
+<h5 id="No3-kiftd云盘"><a href="#No3-kiftd云盘" class="headerlink" title="No3.kiftd云盘"></a>No3.kiftd云盘</h5><p>日期：2019-9-25<br>支持权限设置。<br>支持所有文件上传。<br>需要java环境，无法在虚拟主机上运行，可以在本地运行并且访问，未在服务器环境下测试。</p>
+<h5 id="No4-Cloudreve"><a href="#No4-Cloudreve" class="headerlink" title="No4.Cloudreve"></a>No4.Cloudreve</h5><p>日期：2019-9-25<br>测试用虚拟主机无法安装宝塔。<br>预计国庆期间在服务器上测试。</p>
+<h5 id="No5-蓝眼云盘"><a href="#No5-蓝眼云盘" class="headerlink" title="No5.蓝眼云盘"></a>No5.蓝眼云盘</h5><p>日期：2019-9-25<br>需要操作系统支持。<br>预计国庆期间在服务器上测试。</p>
+<h5 id="No6-nextcloud"><a href="#No6-nextcloud" class="headerlink" title="No6.nextcloud"></a>No6.nextcloud</h5><p>日期：2019-9-25<br>需要宝塔支持。<br>预计国庆期间在服务器上测试。</p>
+<h5 id="No-7Amoli"><a href="#No-7Amoli" class="headerlink" title="No.7Amoli"></a>No.7Amoli</h5><p>日期：2019-9-25<br>仅支持下载操作，后台上传。<br>无用户系统支持。</p>
+<h4 id="实际搭建阶段"><a href="#实际搭建阶段" class="headerlink" title="实际搭建阶段"></a>实际搭建阶段</h4><p>未开始，预计在国庆期间开始。</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年09月27日 20:37</p>
+        <p>原始链接： <a class="post-url" href="/2019/09/24/影像共享平台/" title="影像共享平台">http://oierlin.cf/2019/09/24/影像共享平台/</a></p>
+        <footer>
+            <a href="http://oierlin.cf">
+                <img src="/images/logo.jpg" alt="Lin Jiale">
+                Lin Jiale
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://oierlin.cf/2019/09/24/影像共享平台/&title=《影像共享平台》 — Oblivion&pic=https://i.postimg.cc/bwSymbGg/image.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://oierlin.cf/2019/09/24/影像共享平台/&title=《影像共享平台》 — Oblivion&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://oierlin.cf/2019/09/24/影像共享平台/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《影像共享平台》 — Oblivion&url=http://oierlin.cf/2019/09/24/影像共享平台/&via=http://oierlin.cf" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://oierlin.cf/2019/09/24/影像共享平台/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://oierlin.cf/2019/09/24/影像共享平台/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/安利/" class="color3">安利</a>
+      
+    <a href="/tags/网站/" class="color3">网站</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#目标"><span class="post-toc-text">目标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#起因"><span class="post-toc-text">起因</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍"><span class="post-toc-text">介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#目的："><span class="post-toc-text">目的：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#平台基本性质："><span class="post-toc-text">平台基本性质：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#服务器的性能："><span class="post-toc-text">服务器的性能：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#用户权限设置："><span class="post-toc-text">用户权限设置：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#资金来源"><span class="post-toc-text">资金来源</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#项目调试日志"><span class="post-toc-text">项目调试日志</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#理论阶段"><span class="post-toc-text">理论阶段</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#测试阶段"><span class="post-toc-text">测试阶段</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#No1-极简网盘"><span class="post-toc-text">No1.极简网盘</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#No2-云存储个人网盘"><span class="post-toc-text">No2.云存储个人网盘</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#No3-kiftd云盘"><span class="post-toc-text">No3.kiftd云盘</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#No4-Cloudreve"><span class="post-toc-text">No4.Cloudreve</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#No5-蓝眼云盘"><span class="post-toc-text">No5.蓝眼云盘</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#No6-nextcloud"><span class="post-toc-text">No6.nextcloud</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#No-7Amoli"><span class="post-toc-text">No.7Amoli</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#实际搭建阶段"><span class="post-toc-text">实际搭建阶段</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/07/【XJOI】燃烧的远征/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">【XJOI】燃烧的远征</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+<!-- ������City�氲װ���� -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NTM1OS8yMTg3Mg==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>Ϊ����ʹ�����������۹����뼤��JavaScript</noscript>
+</div>
+<!-- City�氲װ��������� --></section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2019 Lin Jiale<br>
+      </p>
+		<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+			<script>
+				var now = new Date(); 
+				function createtime() { 
+					var grt= new Date("08/10/2018 12:49:00");//此处修改你的建站时间或者网站上线时间 
+					now.setTime(now.getTime()+250); 
+					days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+					hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+					if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+					mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+					seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+					snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+					document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+					document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+				} 
+			setInterval("createtime()",250);
+		</script>
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+  </div>
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://oierlin.cf",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/安利/">安利</a><a class="category-link" href="/categories/宣言/">宣言</a><a class="category-link" href="/categories/教学/">教学</a><a class="category-link" href="/categories/杂记/">杂记</a><a class="category-link" href="/categories/游戏/">游戏</a><a class="category-link" href="/categories/题解/">题解</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 12.5px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 17.5px;">安利</a> <a href="/tags/教学/" style="font-size: 15px;">教学</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 12.5px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/users">
+                    <i class="fa fa-users"></i><span>友链</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 12.5px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 17.5px;">安利</a> <a href="/tags/教学/" style="font-size: 15px;">教学</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 12.5px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":250,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>

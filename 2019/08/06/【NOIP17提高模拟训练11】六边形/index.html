@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0eeeae6f.js","daovoice")
+ daovoice('init', {
+  app_id: "ed1f6dc3"
+});
+daovoice('update');
+ </script>
+<head>
+  <meta charset="utf-8">
+  
+  <title>【NOIP17提高模拟训练11】六边形 | Oblivion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Oblivion,Oblivion's blog" />
+  
+  <meta name="description" content="题目链接 六边形题目描述：棋盘是由许多个六边形构成的，共有5种不同的六边形编号为1到5，棋盘的生成规则如下：  从中心的一个六边形开始，逆时针向外生成一个个六边形。 对于刚生成的一个六边形，我们要确定它的种类，它的种类必须满足与已生成的相邻的六边形不同。 如果有多个种类可以选，我们选择出现次数最少的种类。 情况3下还有多个种类可以选，我们选择数字编号最小的。  现在要你求第$N$个生成的六边形的编">
+<meta name="keywords" content="题解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【NOIP17提高模拟训练11】六边形">
+<meta property="og:url" content="http://oierlin.cf/2019/08/06/【NOIP17提高模拟训练11】六边形/index.html">
+<meta property="og:site_name" content="Oblivion">
+<meta property="og:description" content="题目链接 六边形题目描述：棋盘是由许多个六边形构成的，共有5种不同的六边形编号为1到5，棋盘的生成规则如下：  从中心的一个六边形开始，逆时针向外生成一个个六边形。 对于刚生成的一个六边形，我们要确定它的种类，它的种类必须满足与已生成的相邻的六边形不同。 如果有多个种类可以选，我们选择出现次数最少的种类。 情况3下还有多个种类可以选，我们选择数字编号最小的。  现在要你求第$N$个生成的六边形的编">
+<meta property="og:locale" content="ch">
+<meta property="og:image" content="https://i.loli.net/2019/08/06/eso42u7yDIBk6EW.jpg">
+<meta property="og:updated_time" content="2019-09-27T12:18:03.424Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【NOIP17提高模拟训练11】六边形">
+<meta name="twitter:description" content="题目链接 六边形题目描述：棋盘是由许多个六边形构成的，共有5种不同的六边形编号为1到5，棋盘的生成规则如下：  从中心的一个六边形开始，逆时针向外生成一个个六边形。 对于刚生成的一个六边形，我们要确定它的种类，它的种类必须满足与已生成的相邻的六边形不同。 如果有多个种类可以选，我们选择出现次数最少的种类。 情况3下还有多个种类可以选，我们选择数字编号最小的。  现在要你求第$N$个生成的六边形的编">
+<meta name="twitter:image" content="https://i.loli.net/2019/08/06/eso42u7yDIBk6EW.jpg">
+  
+  
+    <link rel="icon" href="/favicon.jpg">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Oblivion&#39;s blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                    <a  href="/users">
+                        <i class="fa fa-users"></i>
+                        <span>友链</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Oblivion&#39;s blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        我什么也做不到，但是我会努力成为你心目中的英雄。——桐人
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home" target="_blank" href="http://home.oierlin.cf/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="https://github.com/oierlin">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=827880042&site=qq&menu=yes">
+                            <i class="fa fa-qq fa-2x"></i></a>
+                    
+                        <a title="Email" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=827880042@qq.com">
+                            <i class="fa fa-envelope fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-【NOIP17提高模拟训练11】六边形" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      【NOIP17提高模拟训练11】六边形
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/题解/">题解</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-08-06
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><a href="https://dev.xjoi.net/contest/1228/problem/2" target="_blank" rel="noopener">题目链接</a></p>
+<h3 id="六边形"><a href="#六边形" class="headerlink" title="六边形"></a>六边形</h3><h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p>棋盘是由许多个六边形构成的，共有5种不同的六边形编号为1到5，棋盘的生成规则如下：</p>
+<ol>
+<li>从中心的一个六边形开始，逆时针向外生成一个个六边形。</li>
+<li>对于刚生成的一个六边形，我们要确定它的种类，它的种类必须满足与已生成的相邻的六边形不同。</li>
+<li>如果有多个种类可以选，我们选择出现次数最少的种类。</li>
+<li>情况3下还有多个种类可以选，我们选择数字编号最小的。</li>
+</ol>
+<p>现在要你求第$N$个生成的六边形的编号？前14个六边形生成图如下：<br><img src="https://i.loli.net/2019/08/06/eso42u7yDIBk6EW.jpg" alt=""></p>
+<h4 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h4><p>第一行：$T$，表示数据组数<br>接下来$T$行，每行一个数:$N$,表示第$N$个六边形</p>
+<h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>共$T$行，每行一个数，表示第$N$个数据的答案</p>
+<h4 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h4><p><pre>4<br>1<br>4<br>10<br>100<br></pre></p>
+<h4 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h4><p><pre>1<br>4<br>5<br>5<br></pre></p>
+<h4 id="数据范围："><a href="#数据范围：" class="headerlink" title="数据范围："></a>数据范围：</h4><p>100%数据满足<br>$1&lt;=T&lt;=20$<br>$1&lt;=N&lt;=10000$<br>30%数据满足<br>$1&lt;=N&lt;=100$</p>
+<h4 id="时间限制："><a href="#时间限制：" class="headerlink" title="时间限制："></a>时间限制：</h4><p>0.1S</p>
+<h4 id="空间限制："><a href="#空间限制：" class="headerlink" title="空间限制："></a>空间限制：</h4><p>256M</p>
+<h4 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h4><p>remove!!!</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>emmm，典型的大模拟题。<br>大模拟题其实就是考码量的，根据题意模拟就行了。<br>重点是如何模拟六边形，我们平时用的二维数组，其实可以看成是四边形，<br>那么六边形嘛，其实也可以放在二维数组里面，不一定要把数组填满。<br>注意数组不要开的太大，博主第一次因为数组开的太大而MLE了。<br>有些奆佬好像使用倾斜的坐标系可以把二维数组填满，但我这里用的是比较菜的方法。<br>我们用$(x,y)$表示当前节点的坐标。<br>那么它的上方节点就是$(x,y+2)$（如果是$(x,y+1)$的话侧面的两个节点是存不下的）<br>下方节点：$(x,y-2)$<br>左上方节点：$(x-1,y+1)$<br>左下方节点：$(x-1,y-1)$<br>右上方节点：$(x+1,y+1)$<br>右下方节点：$(x+1,y-1)$<br>记得第一个数不要放在$(1,1)$或者$(0,0)$这种角落，最好是数组的最中间，不然会很happy。<br>那么接下来就是模拟了，因为依次循环模拟增加一个点会很麻烦，需要再记录当前要增加节点应该往哪个方向，圈数增加时还要特判，所以我就每次增加一圈，只要记录当前是第几圈就好了，但是要注意增加时如果达到目标要及时退出，或者把数组开大一点，因为到后面一圈增加的点数会很多。<br>题目里要求填出现次数最少，编号最小，没有在相邻节点出现的数。<br>我们根据出现次数最少，编号最小的优先级给5个点排个序。<br>当选择一个点的时候，这个点的出现次数增加1，那么5个点的排序只会让增加的点往后移动若干位，其他点相对之间的位置是不变的，所以增加点的时候维护一下优先级。（其实只有5个点，增加的时候暴搜应该也可以）<br>是否在相邻节点出现的话在增加节点的时候判断就好了。<br>博主由于想节约时间（其实是不想把数组清空的强迫症），在这里使用离线的方法做的。<br>上代码：<br><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#include&lt;bits/stdc++.h&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="title">std</span>;</span><br><span class="line"><span class="keyword">int</span> t,n[<span class="number">29</span>],mx;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">10009</span>],l;</span><br><span class="line"><span class="keyword">int</span> s[<span class="number">5009</span>][<span class="number">5009</span>];<span class="comment">//看一下数组里存点的空间，可以发现是按照网格状存储的，所以也可以开小一点</span></span><br><span class="line"><span class="keyword">int</span> x=<span class="number">2500</span>,y=<span class="number">2500</span>,tt=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">struct</span> aa&#123;</span><br><span class="line">	<span class="keyword">int</span> x,s;</span><br><span class="line">&#125;p[<span class="number">9</span>];</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pd</span>(<span class="params"><span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> xx</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(s[x<span class="number">-1</span>][y<span class="number">-1</span>]==xx) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(s[x<span class="number">-1</span>][y+<span class="number">1</span>]==xx) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(s[x+<span class="number">1</span>][y<span class="number">-1</span>]==xx) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(s[x+<span class="number">1</span>][y+<span class="number">1</span>]==xx) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(s[x][y+<span class="number">2</span>]==xx) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(s[x][y<span class="number">-2</span>]==xx) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	scanf(<span class="string">"%d"</span>,&amp;t);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=t;j++)&#123;</span><br><span class="line">		scanf(<span class="string">"%d"</span>,&amp;n[j]);</span><br><span class="line">		mx=max(mx,n[j]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> u=<span class="number">1</span>;</span><br><span class="line">	a[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;<span class="number">5</span>;j++)</span><br><span class="line">		p[j].x=j+<span class="number">1</span>;</span><br><span class="line">	p[<span class="number">5</span>].x=<span class="number">1</span>;p[<span class="number">5</span>].s=<span class="number">1</span>;</span><br><span class="line">	s[x][y]=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=<span class="number">6</span>;j++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=tt;i++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(j==<span class="number">1</span>)&#123;</span><br><span class="line">					<span class="keyword">if</span>(i==<span class="number">1</span>)&#123;x++;y++;&#125;</span><br><span class="line">					<span class="keyword">else</span> y+=<span class="number">2</span>;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span>(j==<span class="number">2</span>)&#123;x--;y++;&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span>(j==<span class="number">3</span>)&#123;x--;y--;&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span>(j==<span class="number">4</span>)&#123;y-=<span class="number">2</span>;&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span>(j==<span class="number">5</span>)&#123;x++;y--;&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span>(j==<span class="number">6</span>)&#123;x++;y++;&#125;</span><br><span class="line">				</span><br><span class="line">				<span class="keyword">int</span> <span class="keyword">as</span>=<span class="number">1</span>;</span><br><span class="line">				<span class="keyword">while</span>(pd(x,y,p[<span class="keyword">as</span>].x)) <span class="keyword">as</span>++;</span><br><span class="line">				p[<span class="keyword">as</span>].s++;</span><br><span class="line">				a[++u]=s[x][y]=p[<span class="keyword">as</span>].x;</span><br><span class="line">				<span class="keyword">if</span>(u&gt;=mx) <span class="keyword">break</span>;</span><br><span class="line">				<span class="keyword">int</span> j=<span class="keyword">as</span>+<span class="number">1</span>;</span><br><span class="line">				aa t=p[<span class="keyword">as</span>];</span><br><span class="line">				<span class="keyword">while</span>(j&lt;=<span class="number">5</span> &amp;&amp; (p[j].s&lt;t.s || (p[j].s==t.s &amp;&amp; p[j].x&lt;t.x)))&#123;</span><br><span class="line">					p[j<span class="number">-1</span>]=p[j];</span><br><span class="line">					j++;</span><br><span class="line">				&#125;</span><br><span class="line">				p[j<span class="number">-1</span>]=t;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(u&gt;=mx) <span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		tt++;</span><br><span class="line">		<span class="keyword">if</span>(u&gt;=mx) <span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=t;j++)</span><br><span class="line">		printf(<span class="string">"%d\n"</span>,a[n[j]]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年09月27日 20:18</p>
+        <p>原始链接： <a class="post-url" href="/2019/08/06/【NOIP17提高模拟训练11】六边形/" title="【NOIP17提高模拟训练11】六边形">http://oierlin.cf/2019/08/06/【NOIP17提高模拟训练11】六边形/</a></p>
+        <footer>
+            <a href="http://oierlin.cf">
+                <img src="/images/logo.jpg" alt="Lin Jiale">
+                Lin Jiale
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://oierlin.cf/2019/08/06/【NOIP17提高模拟训练11】六边形/&title=《【NOIP17提高模拟训练11】六边形》 — Oblivion&pic=https://i.postimg.cc/ydq1ZNvd/NOIP17-11.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://oierlin.cf/2019/08/06/【NOIP17提高模拟训练11】六边形/&title=《【NOIP17提高模拟训练11】六边形》 — Oblivion&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://oierlin.cf/2019/08/06/【NOIP17提高模拟训练11】六边形/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【NOIP17提高模拟训练11】六边形》 — Oblivion&url=http://oierlin.cf/2019/08/06/【NOIP17提高模拟训练11】六边形/&via=http://oierlin.cf" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://oierlin.cf/2019/08/06/【NOIP17提高模拟训练11】六边形/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://oierlin.cf/2019/08/06/【NOIP17提高模拟训练11】六边形/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/题解/" class="color3">题解</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#六边形"><span class="post-toc-text">六边形</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题目描述："><span class="post-toc-text">题目描述：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#输入格式："><span class="post-toc-text">输入格式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#输出格式："><span class="post-toc-text">输出格式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#样例输入："><span class="post-toc-text">样例输入：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#样例输出："><span class="post-toc-text">样例输出：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#数据范围："><span class="post-toc-text">数据范围：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#时间限制："><span class="post-toc-text">时间限制：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#空间限制："><span class="post-toc-text">空间限制：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#提示："><span class="post-toc-text">提示：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题解"><span class="post-toc-text">题解</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2019/08/06/【NOIP17提高模拟训练11】数列/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          【NOIP17提高模拟训练11】数列
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2019/08/05/【洛谷P3387】（模板）缩点/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">【洛谷P3387】（模板）缩点</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+<!-- ������City�氲װ���� -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NTM1OS8yMTg3Mg==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>Ϊ����ʹ�����������۹����뼤��JavaScript</noscript>
+</div>
+<!-- City�氲װ��������� --></section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2019 Lin Jiale<br>
+      </p>
+		<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+			<script>
+				var now = new Date(); 
+				function createtime() { 
+					var grt= new Date("08/10/2018 12:49:00");//此处修改你的建站时间或者网站上线时间 
+					now.setTime(now.getTime()+250); 
+					days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+					hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+					if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+					mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+					seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+					snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+					document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+					document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+				} 
+			setInterval("createtime()",250);
+		</script>
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+  </div>
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://oierlin.cf",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/安利/">安利</a><a class="category-link" href="/categories/宣言/">宣言</a><a class="category-link" href="/categories/教学/">教学</a><a class="category-link" href="/categories/杂记/">杂记</a><a class="category-link" href="/categories/游戏/">游戏</a><a class="category-link" href="/categories/题解/">题解</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 12.5px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 17.5px;">安利</a> <a href="/tags/教学/" style="font-size: 15px;">教学</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 12.5px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/users">
+                    <i class="fa fa-users"></i><span>友链</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 12.5px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 17.5px;">安利</a> <a href="/tags/教学/" style="font-size: 15px;">教学</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 12.5px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":250,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>

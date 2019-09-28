@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0eeeae6f.js","daovoice")
+ daovoice('init', {
+  app_id: "ed1f6dc3"
+});
+daovoice('update');
+ </script>
+<head>
+  <meta charset="utf-8">
+  
+  <title>【温州中学】好朋友 | Oblivion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Oblivion,Oblivion's blog" />
+  
+  <meta name="description" content="题目链接（咕咕咕？） 好朋友题目描述： 　　noip2011就要来了，W校的同学们不仅看重这次比赛，更看重noip2011和谁住在同一个房间。同学之间的关系好坏可以用一个亲密值表示，亲密值越大，两个同学关系越好。小A作为W校信息组的组长，自然想要让同学们在比赛前能好好休息，放松心情，让同学们在赛场上能够超常发挥。他现在知道自己预订的房间都是双人间，且知道这$n$个同学之间的关系。$n$个同学的关系">
+<meta name="keywords" content="题解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【温州中学】好朋友">
+<meta property="og:url" content="http://oierlin.cf/2019/07/30/【温州中学】好朋友/index.html">
+<meta property="og:site_name" content="Oblivion">
+<meta property="og:description" content="题目链接（咕咕咕？） 好朋友题目描述： 　　noip2011就要来了，W校的同学们不仅看重这次比赛，更看重noip2011和谁住在同一个房间。同学之间的关系好坏可以用一个亲密值表示，亲密值越大，两个同学关系越好。小A作为W校信息组的组长，自然想要让同学们在比赛前能好好休息，放松心情，让同学们在赛场上能够超常发挥。他现在知道自己预订的房间都是双人间，且知道这$n$个同学之间的关系。$n$个同学的关系">
+<meta property="og:locale" content="ch">
+<meta property="og:image" content="https://i.loli.net/2019/07/30/5d3fcfaaccdfb66796.png">
+<meta property="og:updated_time" content="2019-09-27T11:53:34.628Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【温州中学】好朋友">
+<meta name="twitter:description" content="题目链接（咕咕咕？） 好朋友题目描述： 　　noip2011就要来了，W校的同学们不仅看重这次比赛，更看重noip2011和谁住在同一个房间。同学之间的关系好坏可以用一个亲密值表示，亲密值越大，两个同学关系越好。小A作为W校信息组的组长，自然想要让同学们在比赛前能好好休息，放松心情，让同学们在赛场上能够超常发挥。他现在知道自己预订的房间都是双人间，且知道这$n$个同学之间的关系。$n$个同学的关系">
+<meta name="twitter:image" content="https://i.loli.net/2019/07/30/5d3fcfaaccdfb66796.png">
+  
+  
+    <link rel="icon" href="/favicon.jpg">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Oblivion&#39;s blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                    <a  href="/users">
+                        <i class="fa fa-users"></i>
+                        <span>友链</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.jpg" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Oblivion&#39;s blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        我什么也做不到，但是我会努力成为你心目中的英雄。——桐人
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="Home" target="_blank" href="http://home.oierlin.cf/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="https://github.com/oierlin">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=827880042&site=qq&menu=yes">
+                            <i class="fa fa-qq fa-2x"></i></a>
+                    
+                        <a title="Email" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=827880042@qq.com">
+                            <i class="fa fa-envelope fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-【温州中学】好朋友" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      【温州中学】好朋友
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/题解/">题解</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-07-30
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><a href="https://dev.xjoi.net/contest/1210/problem/2" target="_blank" rel="noopener">题目链接</a>（咕咕咕？）</p>
+<h3 id="好朋友"><a href="#好朋友" class="headerlink" title="好朋友"></a>好朋友</h3><h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p> 　　noip2011就要来了，W校的同学们不仅看重这次比赛，更看重noip2011和谁住在同一个房间。同学之间的关系好坏可以用一个亲密值表示，亲密值越大，两个同学关系越好。小A作为W校信息组的组长，自然想要让同学们在比赛前能好好休息，放松心情，让同学们在赛场上能够超常发挥。他现在知道自己预订的房间都是双人间，且知道这$n$个同学之间的关系。$n$个同学的关系可以用一个$n$条双向边的连通图来描述，即某个同学只愿意和与他有边相连的同学住同一个房间，边权即为两个同学的亲密值。数据保证没有重边、自环。现在小A想知道在让所有同学的要求满足的情况下，亲密值最低的一对同学亲密值最高是多少。</p>
+<h4 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h4><p>　　第一行一个正整数$n$，下面$n$行每行三个数$u$，$v$，$w$，表示$u$到$v$有一条边权为$w$的双向边。</p>
+<h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>　　假如无论如何都无法满足所有同学的要求，输出”no answer”，否则输出亲密值最低的一对同学的最高亲密值。</p>
+<h4 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h4><p><pre>4<br>1 2 3<br>2 3 10<br>3 4 3<br>1 4 1<br></pre></p>
+<h4 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h4><p><pre>3<br></pre><br>数据范围：<br>50%的数据满足$n&lt;=20$；<br>80%的数据满足$n&lt;=1000$；<br>100%的数据满足$n&lt;=100000$，$-10^9&lt;=w&lt;=10^9$</p>
+<h4 id="时间限制："><a href="#时间限制：" class="headerlink" title="时间限制："></a>时间限制：</h4><p>1S</p>
+<h4 id="空间限制："><a href="#空间限制：" class="headerlink" title="空间限制："></a>空间限制：</h4><p>64M</p>
+<h4 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h4><p>remove!!!</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>$n$个点，$n$条边？那不就是一棵树再加上一条边吗？<br>那么我们只要一直将树（暂且称他为树吧）的叶子节点（也就是度为1）的点所连的那条边删掉（每一个人都要有配对，所以叶子节点的配对方案是惟一的），最后就只剩下那一个环或者环上的一个点被叶子节点删除导致所有节点都被删除。<br>这里我们可以用宽搜删除节点，删除后更新度为一的节点。<br>在删除节点的过程中我们要注意无法删除的节点，是否”no answer”。<br><img src="https://i.loli.net/2019/07/30/5d3fcfaaccdfb66796.png" alt=""><br>如上图就得”no answer”。<br>所以在删除叶子时只要有点没被删除也无法被配对，也就是度为0时，要”no answer”。<br>接下来考虑环的两种情况就行了。<br>我们可以用两个变量$u_1$，$u_2$查找两种情况的最小值。<br>因为这两个数大于等于之前删叶子时求出的$ans$时对$ans$没有影响，所以这两个数在搜索前可以等于$ans$。<br>上代码：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int n,ans;</span><br><span class="line">int u,v,w;</span><br><span class="line">struct aa&#123;</span><br><span class="line">	int <span class="keyword">to</span>,nxt,v;</span><br><span class="line">&#125;p[200009];</span><br><span class="line">int len;</span><br><span class="line">int s[100009];</span><br><span class="line">int pp[100009],l,r;</span><br><span class="line">bool k[100009];</span><br><span class="line">int h[100009];</span><br><span class="line">int u1,u2;</span><br><span class="line">void <span class="builtin-name">add</span>(int x,int y,int v)&#123;</span><br><span class="line">	len++;</span><br><span class="line">	p[len].<span class="attribute">to</span>=y;</span><br><span class="line">	p[len].<span class="attribute">v</span>=v;</span><br><span class="line">	p[len].<span class="attribute">nxt</span>=h[x];</span><br><span class="line">	h[x]=len;</span><br><span class="line">&#125;</span><br><span class="line">int asdkkk;</span><br><span class="line">bool qq;</span><br><span class="line">void dfs(int x,bool kk)&#123;</span><br><span class="line">	k[x]=1;</span><br><span class="line">	<span class="keyword">for</span>(int <span class="attribute">j</span>=h[x];j;<span class="attribute">j</span>=p[j].nxt)&#123;</span><br><span class="line">		<span class="keyword">if</span>(!k[p[j].<span class="keyword">to</span>] || (p[j].<span class="attribute">to</span>==asdkkk &amp;&amp; <span class="attribute">qq</span>==0))&#123;</span><br><span class="line">			<span class="keyword">if</span>(kk) <span class="attribute">u1</span>=min(u1,p[j].v);</span><br><span class="line">			<span class="keyword">else</span> <span class="attribute">u2</span>=min(u2,p[j].v);</span><br><span class="line">			<span class="keyword">if</span>(<span class="attribute">qq</span>==1) <span class="attribute">qq</span>=0;</span><br><span class="line">			<span class="keyword">if</span>(<span class="attribute">x</span>==asdkkk) <span class="attribute">qq</span>=1;</span><br><span class="line">			dfs(p[j].<span class="keyword">to</span>,!kk);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	scanf(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">if</span>(n%2)&#123;</span><br><span class="line">		printf(<span class="string">"no answer"</span>);</span><br><span class="line">		return 0;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(int <span class="attribute">j</span>=1;j&lt;=n;j++)&#123;</span><br><span class="line">		scanf(<span class="string">"%d%d%d"</span>,&amp;u,&amp;v,&amp;w);</span><br><span class="line">		<span class="attribute">ans</span>=max(ans,w);</span><br><span class="line">		<span class="builtin-name">add</span>(u,v,w);</span><br><span class="line">		<span class="builtin-name">add</span>(v,u,w);</span><br><span class="line">		s[u]++;</span><br><span class="line">		s[v]++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(int <span class="attribute">j</span>=1;j&lt;=n;j++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(s[j]==1) pp[++r]=j;</span><br><span class="line">		<span class="keyword">if</span>(s[j]==0)&#123;</span><br><span class="line">			printf(<span class="string">"no answer"</span>);</span><br><span class="line">			return 0;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(l&lt;=r)&#123;</span><br><span class="line">		int <span class="attribute">u</span>=0;</span><br><span class="line">		l++;</span><br><span class="line">		<span class="keyword">if</span>(k[pp[l]]) continue;</span><br><span class="line">		<span class="keyword">for</span>(int <span class="attribute">j</span>=h[pp[l]];j;<span class="attribute">j</span>=p[j].nxt)&#123;</span><br><span class="line">			<span class="keyword">if</span>(!k[p[j].<span class="keyword">to</span>])&#123;</span><br><span class="line">				<span class="attribute">u</span>=p[j].<span class="keyword">to</span>;</span><br><span class="line">				k[pp[l]]=1;</span><br><span class="line">				k[p[j].<span class="keyword">to</span>]=1;</span><br><span class="line">				<span class="attribute">ans</span>=min(ans,p[j].v);</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(!l)&#123;</span><br><span class="line">			printf(<span class="string">"no answer"</span>);</span><br><span class="line">			return 0;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(int <span class="attribute">j</span>=h[u];j;<span class="attribute">j</span>=p[j].nxt)&#123;</span><br><span class="line">			s[p[j].<span class="keyword">to</span>]--;</span><br><span class="line">			<span class="keyword">if</span>(!k[p[j].<span class="keyword">to</span>])&#123;</span><br><span class="line">				<span class="keyword">if</span>(s[p[j].<span class="keyword">to</span>]==1) pp[++r]=p[j].<span class="keyword">to</span>;</span><br><span class="line">				<span class="keyword">if</span>(!s[p[j].<span class="keyword">to</span>])&#123;</span><br><span class="line">					printf(<span class="string">"no answer"</span>);</span><br><span class="line">					return 0;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(int <span class="attribute">j</span>=1;j&lt;=n;j++)</span><br><span class="line">		<span class="keyword">if</span>(!k[j])&#123;<span class="attribute">asdkkk</span>=j;break;&#125;</span><br><span class="line">	<span class="keyword">if</span>(asdkkk)&#123;</span><br><span class="line">		<span class="attribute">u1</span>=u2=ans;</span><br><span class="line">		dfs(asdkkk,1);</span><br><span class="line">		<span class="attribute">ans</span>=min(ans,max(u1,u2));</span><br><span class="line">	&#125;</span><br><span class="line">	printf(<span class="string">"%d"</span>,ans);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年09月27日 19:53</p>
+        <p>原始链接： <a class="post-url" href="/2019/07/30/【温州中学】好朋友/" title="【温州中学】好朋友">http://oierlin.cf/2019/07/30/【温州中学】好朋友/</a></p>
+        <footer>
+            <a href="http://oierlin.cf">
+                <img src="/images/logo.jpg" alt="Lin Jiale">
+                Lin Jiale
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.png" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.png">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.png">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://oierlin.cf/2019/07/30/【温州中学】好朋友/&title=《【温州中学】好朋友》 — Oblivion&pic=https://i.postimg.cc/fTkT0Y55/image.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://oierlin.cf/2019/07/30/【温州中学】好朋友/&title=《【温州中学】好朋友》 — Oblivion&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://oierlin.cf/2019/07/30/【温州中学】好朋友/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【温州中学】好朋友》 — Oblivion&url=http://oierlin.cf/2019/07/30/【温州中学】好朋友/&via=http://oierlin.cf" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://oierlin.cf/2019/07/30/【温州中学】好朋友/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://oierlin.cf/2019/07/30/【温州中学】好朋友/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/题解/" class="color3">题解</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#好朋友"><span class="post-toc-text">好朋友</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题目描述："><span class="post-toc-text">题目描述：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#输入格式："><span class="post-toc-text">输入格式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#输出格式："><span class="post-toc-text">输出格式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#样例输入："><span class="post-toc-text">样例输入：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#样例输出："><span class="post-toc-text">样例输出：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#时间限制："><span class="post-toc-text">时间限制：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#空间限制："><span class="post-toc-text">空间限制：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#提示："><span class="post-toc-text">提示：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题解"><span class="post-toc-text">题解</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2019/07/31/【XJOI】数字转换/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          【XJOI】数字转换
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2019/07/29/【温州中学】基因光线/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">【温州中学】基因光线</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+<!-- ������City�氲װ���� -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NTM1OS8yMTg3Mg==">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>Ϊ����ʹ�����������۹����뼤��JavaScript</noscript>
+</div>
+<!-- City�氲װ��������� --></section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2019 Lin Jiale<br>
+      </p>
+		<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+			<script>
+				var now = new Date(); 
+				function createtime() { 
+					var grt= new Date("08/10/2018 12:49:00");//此处修改你的建站时间或者网站上线时间 
+					now.setTime(now.getTime()+250); 
+					days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+					hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+					if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+					mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+					seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+					snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+					document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+					document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+				} 
+			setInterval("createtime()",250);
+		</script>
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+  </div>
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://oierlin.cf",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/安利/">安利</a><a class="category-link" href="/categories/宣言/">宣言</a><a class="category-link" href="/categories/教学/">教学</a><a class="category-link" href="/categories/杂记/">杂记</a><a class="category-link" href="/categories/游戏/">游戏</a><a class="category-link" href="/categories/题解/">题解</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 12.5px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 17.5px;">安利</a> <a href="/tags/教学/" style="font-size: 15px;">教学</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 12.5px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/users">
+                    <i class="fa fa-users"></i><span>友链</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/HDU/" style="font-size: 10px;">HDU</a> <a href="/tags/博客/" style="font-size: 12.5px;">博客</a> <a href="/tags/启动器/" style="font-size: 10px;">启动器</a> <a href="/tags/安利/" style="font-size: 17.5px;">安利</a> <a href="/tags/教学/" style="font-size: 15px;">教学</a> <a href="/tags/杂记/" style="font-size: 10px;">杂记</a> <a href="/tags/洛谷/" style="font-size: 10px;">洛谷</a> <a href="/tags/游戏/" style="font-size: 10px;">游戏</a> <a href="/tags/统计/" style="font-size: 10px;">统计</a> <a href="/tags/网站/" style="font-size: 12.5px;">网站</a> <a href="/tags/聊天工具/" style="font-size: 10px;">聊天工具</a> <a href="/tags/题解/" style="font-size: 20px;">题解</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":250,"height":500},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
