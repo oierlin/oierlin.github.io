@@ -9,23 +9,23 @@ daovoice('update');
 <head>
   <meta charset="utf-8">
   
-  <title>【XJOI】数字转换 | Oblivion</title>
+  <title>校门外的树 | Oblivion</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Oblivion,Oblivion's blog" />
   
-  <meta name="description" content="题目链接 数字转换题目描述：如果一个数x的约数和（不包括它本身，下同）比它本身小，那么x可以变成它的约数和；如果对于某个y&amp;gt;x且y的约数和为x，那么x也可以变成y。例如，4可以变为3，1可以变为7。限定所有的数字变换在不超过n的正整数范围内进行，求不断进行数字变换且没有重复数字出现的最多变换步数。 输入格式：输入一个正整数n。 输出格式：输出最少需要花费的时间。 样例输入：7 样例输出：3">
-<meta name="keywords" content="题解">
+  <meta name="description" content="此文章被加密，请输入密码查看。">
+<meta name="keywords" content="博客文章密码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【XJOI】数字转换">
-<meta property="og:url" content="http://oierlin.cf/2019/07/31/【XJOI】数字转换/index.html">
+<meta property="og:title" content="校门外的树">
+<meta property="og:url" content="http://oierlin.cf/2019/08/07/校门外的树/index.html">
 <meta property="og:site_name" content="Oblivion">
-<meta property="og:description" content="题目链接 数字转换题目描述：如果一个数x的约数和（不包括它本身，下同）比它本身小，那么x可以变成它的约数和；如果对于某个y&amp;gt;x且y的约数和为x，那么x也可以变成y。例如，4可以变为3，1可以变为7。限定所有的数字变换在不超过n的正整数范围内进行，求不断进行数字变换且没有重复数字出现的最多变换步数。 输入格式：输入一个正整数n。 输出格式：输出最少需要花费的时间。 样例输入：7 样例输出：3">
+<meta property="og:description" content="此文章被加密，请输入密码查看。">
 <meta property="og:locale" content="ch">
-<meta property="og:updated_time" content="2019-09-27T11:57:43.376Z">
+<meta property="og:updated_time" content="2019-10-21T08:37:51.445Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【XJOI】数字转换">
-<meta name="twitter:description" content="题目链接 数字转换题目描述：如果一个数x的约数和（不包括它本身，下同）比它本身小，那么x可以变成它的约数和；如果对于某个y&amp;gt;x且y的约数和为x，那么x也可以变成y。例如，4可以变为3，1可以变为7。限定所有的数字变换在不超过n的正整数范围内进行，求不断进行数字变换且没有重复数字出现的最多变换步数。 输入格式：输入一个正整数n。 输出格式：输出最少需要花费的时间。 样例输入：7 样例输出：3">
+<meta name="twitter:title" content="校门外的树">
+<meta name="twitter:description" content="此文章被加密，请输入密码查看。">
   
   
     <link rel="icon" href="/favicon.jpg">
@@ -121,14 +121,14 @@ daovoice('update');
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-【XJOI】数字转换" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-校门外的树" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      【XJOI】数字转换
+      校门外的树
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -141,7 +141,7 @@ daovoice('update');
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2019-07-31
+          <i class="fa fa-calendar"></i>  2019-08-07
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -157,22 +157,19 @@ daovoice('update');
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p><a href="https://loj.ac/problem/10155" target="_blank" rel="noopener">题目链接</a></p>
-<h3 id="数字转换"><a href="#数字转换" class="headerlink" title="数字转换"></a>数字转换</h3><h4 id="题目描述："><a href="#题目描述：" class="headerlink" title="题目描述："></a>题目描述：</h4><p>如果一个数x的约数和（不包括它本身，下同）比它本身小，那么x可以变成它的约数和；如果对于某个y&gt;x且y的约数和为x，那么x也可以变成y。例如，4可以变为3，1可以变为7。限定所有的数字变换在不超过n的正整数范围内进行，求不断进行数字变换且没有重复数字出现的最多变换步数。</p>
-<h4 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h4><p>输入一个正整数n。</p>
-<h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>输出最少需要花费的时间。</p>
-<h4 id="样例输入："><a href="#样例输入：" class="headerlink" title="样例输入："></a>样例输入：</h4><p><pre>7<br></pre></p>
-<h4 id="样例输出："><a href="#样例输出：" class="headerlink" title="样例输出："></a>样例输出：</h4><p><pre>3<br></pre></p>
-<h4 id="数据范围："><a href="#数据范围：" class="headerlink" title="数据范围："></a>数据范围：</h4><p>$n&lt;=50,000$。</p>
-<h4 id="时间限制："><a href="#时间限制：" class="headerlink" title="时间限制："></a>时间限制：</h4><p>1000</p>
-<h4 id="空间限制："><a href="#空间限制：" class="headerlink" title="空间限制："></a>空间限制：</h4><p>32768</p>
-<h4 id="提示："><a href="#提示：" class="headerlink" title="提示："></a>提示：</h4><p>remove!!!</p>
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>博主刚开始打时被卡题意了o(╥﹏╥)o，看成了要从$n$开始转换。<br>假设$i$可以变成$j$（$j&lt;i$），那么$j$也可以变成$i$。<br>那么$i$和$j$之间可以连一条双向边。<br>因为每个数的约数和是惟一的，而且每个数能变成他的约数和的条件是它的约数和小于它本身，所以把这些可以转移的约数和排列起来，有没有像输入一棵树时给你每个节点的父亲节点？<br>那么我们就可以把这些点转换为一棵树，问题就变成了求树的直径。<br>树的直径怎么求？两遍dfs就好了，萌新请自行学习，博主就不在这里赘述了。<br>上代码：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></span><br><span class="line"><span class="comment">#include&lt;vector&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line">int n;</span><br><span class="line">int <span class="keyword">to</span>[300009];</span><br><span class="line">int ans;</span><br><span class="line">struct aa&#123;</span><br><span class="line">	int nxt,<span class="keyword">to</span>;</span><br><span class="line">&#125;p[50009];</span><br><span class="line">int l,h[50009];</span><br><span class="line">bool k[500009];</span><br><span class="line">int uu,ux;</span><br><span class="line">void <span class="builtin-name">add</span>(int x,int y)&#123;</span><br><span class="line">	l++;</span><br><span class="line">	p[l].<span class="attribute">nxt</span>=h[x];</span><br><span class="line">	p[l].<span class="attribute">to</span>=y;</span><br><span class="line">	h[x]=l;</span><br><span class="line">&#125;</span><br><span class="line">void dfs1(int x,int u)&#123;</span><br><span class="line">	<span class="keyword">if</span>(u&gt;uu)&#123;</span><br><span class="line">		<span class="attribute">uu</span>=u;</span><br><span class="line">		<span class="attribute">ux</span>=x;</span><br><span class="line">	&#125;</span><br><span class="line">	k[x]=1;</span><br><span class="line">	<span class="keyword">for</span>(int <span class="attribute">j</span>=h[x];j;<span class="attribute">j</span>=p[j].nxt)&#123;</span><br><span class="line">		<span class="keyword">if</span>(k[p[j].<span class="keyword">to</span>]==0) dfs1(p[j].<span class="keyword">to</span>,u+1);</span><br><span class="line">	&#125;</span><br><span class="line">	k[x]=0;</span><br><span class="line">&#125;</span><br><span class="line">void dfs2(int x,int u)&#123;</span><br><span class="line">	<span class="attribute">ans</span>=max(ans,u);</span><br><span class="line">	k[x]=1;</span><br><span class="line">	<span class="keyword">for</span>(int <span class="attribute">j</span>=h[x];j;<span class="attribute">j</span>=p[j].nxt)</span><br><span class="line">		<span class="keyword">if</span>(k[p[j].<span class="keyword">to</span>]==0) dfs2(p[j].<span class="keyword">to</span>,u+1);</span><br><span class="line">	k[x]=0;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">	scanf(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">	<span class="keyword">for</span>(int <span class="attribute">j</span>=1;j&lt;=n;j++)&#123;</span><br><span class="line">		int <span class="attribute">i</span>=2;</span><br><span class="line">		<span class="keyword">while</span>(j*i&lt;=n)&#123;</span><br><span class="line">			<span class="keyword">to</span>[j*i]+=j;</span><br><span class="line">			i++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(j!=1 &amp;&amp; <span class="keyword">to</span>[j]&lt;j)&#123;</span><br><span class="line">			<span class="builtin-name">add</span>(j,<span class="keyword">to</span>[j]);</span><br><span class="line">			<span class="builtin-name">add</span>(<span class="keyword">to</span>[j],j);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	dfs1(1,0);</span><br><span class="line">	dfs2(ux,0);</span><br><span class="line">	printf(<span class="string">"%d"</span>,ans);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+            <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="中间机房门牌号" />
+    <label for="hbePass">中间机房门牌号</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="6c9a66bbe97497021c26cc1acf05add177be988415915898679455f0e71cf38f">f6de61c1ae96d0824b6a5eb39ca72c72be728678f98e7c481714d10945075c9a5581d3a7e584b4135ba833969216637da32c6b4eac6ab7853feeead66c0ac0ba3ac66dd3bc6af42338dec75469bce6ca0a7b8954fbe92c8c0c3e964872b60fe8363062ddbff881ddf0b3f806d72bf950730a37e758d4a4c747fa30e64053dd72eb8d960fc6123a3221dca7135a03392e97ad37bf6bcbeac642f81cc1ec8951702dd33b180f86d1fc94bdb2a0706900e61ac5f3ee335f98ff6cf2f4c5468529562ac4c0c613b937153af3669bdb7b71028f6e084c6dde573617d3cddf14be42ad67a4626107122fc781218349575193988c78e48f9b79fe01f877c69d519e332be09294786a09da80c322af0d9686d056ea6c056efc626a64e2599f2467ef1b7081a4bf1dba593c377a24486c4a4a3de08c59e95fc7d50b130acccb6b620bbfa73437064b4f97dd009c625d454e378a41dd1494b17d12f900087bfc4186284626ee068aa0e8fbd1d30a693f52b3d91057258c124d36a40502e091371a8d9229e563ddab32fdca3f0363b96e1f411be2cd044827805a2414a0017bccfee410b7ccfb79c8640d2fe36e2808f0da8ecc661f84c783f9e4a7255ab4f436a44b380f2f6ab3091e6ad9d6ac577fc36bb1d14cec277958ae770c1f0091db1f49e50988d3c8d4f2ad85ea97dcbb2d8c7029fc7000d7f73195ecee7fb245f3ba45e86f4d7e2ac3e70831713cadbb385c4d585b07f11a2cfb44f5dd9f7d039cd6304720feaf0ed7422696eb0edd8fce2b97a9c8ec5e5084c4ef32e608a581430cd7bb97c10282a2e7f27ae7f1001460a95d417f0f9bdec031d69fce20f236a612f28bff7001098ac0e287bf3f097d9c203f8aff9990a26aafeb81c07e1f58f2e0ffce461fc901120741d24a86426c9fdf80a05669a66fc01782f95b61c7e8a88be9585610840aafc075d40a93a87f53eb8152888a9b07db2b2387c70f12ad3fa38932c03f621002b4e336f078ce41d419dd14d295e91d79f46b9af4f94cadad33a186989568e01c3f7ffdfd4878b8512e92d0160a7e87627c169a0dc1ee13ebf54a79bd26baf22a4e27019c0afd3e6ecfa1b275a6d0dde653eca01f8f0e6aaf949029f2c38dc263173bb1e91e3dbc6d3028e4b0ead8d69e827995e8be7b9fcaf57b7ffbcace79cd52ae8966251b6625240011692cb3da914a70458d44036df8e8245a88e65f7586eb00dc98d40cd5412b2ef315cb99dfca44f2e4fde24112b2fd2865510df8351f609ebb9cfb208d86627b5b2d19ffff9953795c58b2aea6a1482d132474850a8aba49e19839ed67e487301833fffb6c45542292246a4299b44edc1da5f2206a8dc3448d683ae748b82e8d744987fa700c2b0ab3acfd418938126ac87ae015fd61f10f5b12e9c1a44830394b2cef08d416c20dd6e46066ef02fff90bbf5851798f5b311d6a8511f2177161f33820595f5b48fc6998e88df33e71ffb601ffafdf911946a56a40d787ee8652013841e6c5dce7fae65167737b7c2de097034553d33c5844f72d25562b397f05686405627b262a4e2065dab9ce2f6acef2605aeb7e534b2e1fd60dd222fbb6347dfdc7b54d74f62f361cd780cd6fb2133dbf3ed9310fdd4dcdd755132158efa5f6a6cfa92c0f152cbaccefd60f5e982e49a2359e788a472f5fe4914b879177808cbc4a2d4bd412bb2f896db45620e3349e5b84d44eccb26b3eba38e7e0973c654782ea49891718d81806c1cde9077bbfbe38cbeff80c2b57790a8a63441d3dc22547698f187ccbcc2864d82ba21cee6eb77252793195fc290f8bbf16ff9baf9fcb0c6b03fc4b2497d068bb4e978f1a7a2bf9b05f119bd3facdd466deb4bd3f9c664a417b51bae856cad3506fe10ac74a4fd1d599651216883ddbe88c267f7eecb55f5febd9e03561b09804360974d0e033fc938924601b1510f01e3146ea41883874478c9007c2849cdf0f00c71facf10ebffdf283fcc12b547595c29784f0925584b9a02dcef0deb483a1b55677b2fa504ae05fab20a78deba8e07c59e334065cff8f21748200c3c72883cb23aed7e634fb86cac6689d264755645179b780fba8e0816a9675d2bd616d6f041b28212f120dba296e7aef2951911e24779a30b72a98b14dc9fd969fc0ed0ba647d70c5f472cbd8ebef38e89e02d5da8dca9d9b98c8669b06aa7587c7c776f0c59a4d2f5d1cf37ce15601c6897c7140eb10a8d1f443e36c3c55f961778536726539a6facced04a411926e20fb4a0cdf0cb8d0dcf5640d88472cafffd9e90e17ff4bffabb764b52f5522cb857d74d76a222676b14673c952e089cae2584198a6cf2b5d836b25cc1049cd48553e36728d369f4179114508a397f2017fa8eed989afdd9312478961ca60214ff5779915a8c4a05fa26b72148e6ffa895c564918eafbd843a761827ba21878887acbac97b7b99481b3c41d717bb1abfaf2d1bee04f7f587ca832a23b85e38ae7142c36e8cb63449647d3dd803072f6452b0adbec71dcf8178e4d076c2410ca3e7683e13779845fbef5d1e789ec01f70e90c2d24586b9c20102c53f3637a8c47acedf3819780df8576b59d9b036314d9df6d7a45a0766c35ec7a5a6a7ff9b3ab7552223e03558d0ebbf52975ac3b972aecadf8c77e952f346ac6418efcd701048d62857d4a88e10674a9ecf824a477b469eaf1772ab63a65552a21daf003e0b0ec7fab34307fa5db3ac04e9103308a87b66c74b08b2394dae7fce098155e61a30ae136417ffb5a987d2909967ff6e2847436473b41747f59b8b67b10951a86eea6da4e2bc0333342a035bdc1af20b102b8bcc450986c9c7c956221c192d46b595abefaba37445414aad09796010c61f71fbc1d81e0302c0221b6f0d5762a79966d747edcd309505d332c6a8fa66fa11013ae12efdc5ad75baf8d867e16c73ee6b1aa4a836ce0e330956aa69291f079cd77fe80920135cc2d772e103d7450521ec45af5486ecf0726dfbb1105d04897c5ea7d74b366ed32d2380c2f98cce223a67eb186f869fb10f2095b91ec341007f4631c25e6433a1ca9199953714efcbe564e0d94dbfcde5b0b3152a05908e03e0246790896069d9c97ee5c5dc081edaf4aacec18d1d384fefa9e004535ffff4a4f119d8b03587dd76e8f7aacfb2343a858ef4aab7a93b23acf869b42360116ee456f4712087a92b838053ceea94ed5eb757c548b0eb9a1157b95a9e66cb5fde327fa524515330b5181e5009791438798878c5b0fcd2156835dbd3571782f882b5bad20d76639c730f3beb66f2ddb7f8997fb102ef5c2b62f412c697ebf7f5517794cee7d8adc758ea90be2568e37d4d2be90ab4658f46b576b3a60afddcda1016fbe4e8d85f12724b07d4009a9bd68a777f0a0beae5cf6786069ace1df9f4087d09d5bfecae3a41e3e103f3a31c1e711a85f2577ea4bdda67af3aa8a4d2a2ccd2ce4dd2a9ec63210aedf15276a8e46cadc4ea5c14fba32e4e9c75062d2cbd32c7ee5fd4bb266d0e6b4db708329fef4f9311ea95138bac96a395d71b85b9cd350eab41baa80c1d55780f93bc31d049d9c530a82b3d68875573f1b03274c824a58905cc2056b3fe5908dca34b98a9d24e2c01a34415e1d24611695bb7837c0723ba58ec03e24bb6228a3b5c86ea05c7e53d2fb7074d8991e3632c2befe9c70f5fd6dbe12fa39d8ca2064a7552d2e8ce35a7c0f0ca3106c1085bd65a522bf85c2435cd53757393d33b202877b1fca581635834d7d7fb9e9d50e9affed52e721e058742e85b25ccb3b3b60c8fe4a7224024654c177bcb372c6b955b7c7a521be5dfa7c7262c18d63b608f4f82c1bedc4465ea477e5400c331c197ea67ed37e3fa457644e34f5055d91901567981001110b197e9f7c42a0341e252a2710d5c95b938a89f33ac6e6db578decb5954fa656e3f4ccaf6ee56b11f59d0a5fe09aa75b6a8f756e8089bd45ac248e5e0dce51ba4288f816d5a226cd151be40cb78664ccea70b835585e137d23c0003f6cfcfd4be34e44e9faa22c790c5547d1dfc86cd5d26eac137c3b42fea4c5b9235e4bc79a4c3117502eb7d365477f69129c20379c82eef4ddc1e8bbb0189b0359b8ff75080b29cb7b69bc7fb843fc9ad639ad9371f5bcfd704385802c6a10780e730d1655a5e6f4d34cc3bb2b4a35409e999ba3854a6099618bc6506783d34ac7aa44170a71dfa7b7a1b07f4018b52c624aa5d4e06537a4be66089eb4a0a5602986d1d8e26c3226a8be5b0dd8a63c72841b005863989f91914313b03a9ee776ffe4e7cf5050412b58e9582660fc2af58ac016bb98cde7926c3c63fc673ba60874d45a72fa4e6037f69a1bbd7a524d1986274fe5ab9f57558acd4e846ed7fe131fb6d0a06e017810ff5549695b29b7a3a87c4dfa3bb763e2956416a5373554ece8ccc1854e17406822d13615abb356ef6a3a2261c40b60a74dbb3bba580301ac7b65a9dedb28dc89b05716a5f40d743d5cfd6586793834b2a4a46f1080d17cec61ceb8de59c328d417c211b90db80e1fa26cd1ad1195420da850eec6bfe4230fe67c12c492dbf0367fcb32fa641273568283d9ed78c13c171d43f63b01db0d6888384536b3661052934dc58f9870257bddf667285cf1c0af6c55bc27b6425303602e2458a9601596260c154d117bc17de669c889f8e4273c2e0109eb484a2d185bf3bd4d09970f852ab532864e227a94ca8a02dd9f856250dcd065f390a928853da1a2d860d928a3c6b1f0af7c442ca6889a20964f3f171326d29d02574a77c135c31b9fa03917641dabf2ab27a3b456633876983e9ef71279f41b3fc0f1ff3b6113a338ae75d62c20f69d8fb80a2d492143995cc5ae1db0c168887aa059af71b6e4362b7b12faab2523b5107ef4b1779a3a6ec332ffcd50ab951e8d96db23450dea925a1f6af90f68013c51be7adde92ef2db27cc6833f6ac35aa766c0d70642d4de26c81f5102cbcdd2fdf80699336972b59d5a3df6f0d5c9757c1149507670053e46ebd19673a8de17a60416eaab9719df2d4063454b9fa4acb3cead418b569414a5ad1922270ffbf03a3823619e8451505ac5f4650f9cef39c2158efd514c7fc3099af6d5622436bb692c0d49f2d6fcef970fca7a76fae603c21655608e9710994feb2b257bf2ad7be730223f10ce9bc42272602f6cb3d6beff8010b50d164d8173058cbc97a7180f244f5a376c7b84df528db7e7e02cd12870f6df35734ffe0d6f6e19f91f3bea8b3002bd9b0f5c8e1518881516e221943d99331310560de64329cde1629db29c764f2d8ec0f9b495467445deb9575b89c2cf7e69a08df535a7cc0b9d52ecfa018e1160f58f807baaad30bbc29300a42b7269ceb98e01d2c899bf7683d575397eb37d6633e1f2bae367c8618754d0b40a959916188d1e5173ef8682ab7224037085593194ecbd8f0217513236b89ffcd1686bf7ae721c17a867e7792fcef5878b505b8f015ceef5c3ae3ebf49b6b39deb9127ac52180a4f5ac00911cab40b95868693e5c5a58fc4bf421dd80654bb945f8054215101e51f41df27a413a92ec7f932a667e6be4a0e6fa0c93b04a787290330e36855e15f20affa6e60be6584b85578b60f517d845d5e5e0599cefb5dd7320a270cfed220f665cc251da8b7b588aa998d28bb43aca48e320cf0addde0beaa97c9583dfcf44dd435204e9d0148a12eef37fce00bef2dd0400367cac201e2c09494587f8a0f6b578b412882376932de03640670c4425015982423c7e767c61f0328c84f9e8ad2d39e5e79514433b0013c723192ada73af5036315b41fda07438314ae4c7d0ad4172f96b9d6a222b5f5e050663d487c707cb8333d283339f96d6c5acb7176c48709a7e1272fec3fbfedf92769f2a898e605b3226cad4d936372a1abb8e480d8834f991e68e012916a266df5c7f45e3fc7d5b09fe08ff6f655b022770821f5ef722a36cb6aee8a54d06c5c4dfc0559aa23d08870e3dd27c62da9b5c49f091dc66667431548be2e108dee64a5eb6f40da8416996a7ca0dc00a805afb24cf4ba18c6bb9dd0d53a174aedb7f531a881b0d8e9a321e63a33517777b4b3a8f555e5db3f559c458e5c0368f2e06233d8e992ddd95804066f7d29b76a5f16096ce53e7b97b2b06fb88c752abdcf620e6939737bba2f42be526bba3b71c581a153384b494622788f3ed5356bf792d63ecc7f1f7804979336b3489c12f73220562b3fcb815ff684d4da789205969fbce6564098526e88ea526ba7720d4d3506c8e78fff3255f43bacbbc9c3e367112c49d0e3b6fd70bd67431179551a7740419c9081e29b684491ea31ff87a1b57e09569fa280daa4d20a2334974bf567e14269df48689024ec79a13d46a833561d70919697136602df4f4da86f9e35e0cf1f683f92eb32ba2c332a958bac6acca01622085624846158f56589efaa914ed8c44441739f9519d8a43542207213b0fa998983603ea5a1ee08293e770f800ff15c5a7a25212213f9f6328c2a91ef0ace61628309a25ab51acb7502bed82394f6d56cdf5cc935f5db69a6fbb6146e6a57f4cef390a8c3258f832543ff64785b18b1c03630281695157684dc65278feebca3cc90c27b64b9d387e45c15ec967f3fc75d7a3179f32e6befc0c25fc1b1cd32d30e0cb34ca656480a7a3a2f8b53cddd44f3f626357710a222d68e25bd0803cc165d54b809099c869ac798e8ac56f8ac7d269860f803665948f9bda83226a72ffaf2e60dbe931235b8bf74b619e13dd1b3a7dcd73dea55c0d6d44b93664f49a837c2cdb658f8566280b5928f19f76abc6bd9bbe6e9af442d5394b4e8658a5c151ede979779e07ced0a811cccfe8f329fc5682220d3bc1d92635b5dedcc1020b2d98e52e60fe364a6022472b2a59dace0ea69acb67fc2639729f99ef77e3a0729860209420fc1d8f74bdd4ba9281f309b987190ce029d19d0975bcb67af4deec704dd3b5c8a1eaa0df83bdf07035ea420f7beb200e4551aebbf4490b99463eb0ada75e5c807b22b91f0339c756898a3e025dc7ca441599f40dbafe2ae9f47c6067d862505a3a24ef9174383ca63810218a8f57d9ec9f6060b3c22dfc787fd79339708e30f7d13a5f05aa488474ed19e84f2838d74dbb9af497f7455ed3b5cb876032073c932a515009700b5e6b6549b6b3f488185256424aa5890b795813a7cc052b15b48258b09a766a05732ca574565ed0aa97ba04845afda735ca1991af78f12d3d468177b736e3b9fa6f37196d749ce32894ce9e2f39e490b0b3596c654204b63850e8337a44dd7a8a53769426adf1faacb33dd302ee7a119371c3791d5126ae81921d07560636663f0514294868f18487786551aa47963d07a72f73bce1b1c35825831c08413ee3f1fdb387a2a742e9ea43ea1830d219c1b4c08d7cd37c88f4433f368ecb5246bbf6f68a131ffe4416469f3f2def94ffbf31cb21fa1c50fcfa99cb2f8e33cac53e69073bcba23a285ff834a70eb033fae97e5edf5996a3d9c684ee0fabab08993657498ea97ff717e1077c9c022ccf30c5d12f248e8fbc7fdcddc5d1a8bc4808c07da7479884b94de677bdb22e297c44c09777388989a95c8722e4a495045426a168bfd3c87424e7b58b986087a7909238b05298e7593d874b475b9ffd146571406d714baaaeac57993d890c0b399347200c8dded02a8d2d229e3a6c08b26d3047c405264230c78d3c2af18cc47dad23b07743b24b69036b3e9ad58a07775bdb49fb82dc192633f6fb0195178306946fde13a88f4b0a92afe86135aacc651ed90bf22d37cda81d5eb73d0b34a1e1bea8e934589f89041fe6903e5a26d8ad02f85b2701d290a86a454fd31cb245993a6d687ebcb1f43494b91bea108a8f13611ff18b4a16d330b8588de4c35144f6702dec5fbf37a0e63d8a006b16d31e01428efc9d87f68de04b0430dbcd1febed225cc22cbb31f29ea0117688375f02c7cdca2305f54cc4862a807ca1758b02e4960a36da9cf89cd3882b78af8cf3a16023d85fce6bc1c269081a415d4f7a9dbb49217aabba20b5921f3fbf733dfb8f561bb550c78d4d4c7d9d7e935dcb337732832ea171c882fea14adeba2455641b7545d79ca362a568c56f0506f8c33f5577796a550d707c8354e1a4be4c2529bea00d376b2c00a0ef57fdff9a998dbde38cf6bd7d36a67597803d077f40c7de828ee355d52af715d3a795b3e73c86c4f3e90cf468dac95d256c23e2d5960a0fa99491a34eb678bcbce36bf4b8618620c7960fafbfe689b7ae2a3aa6807abbe530f225d32a903f33e887c7a4bb25b1e78b9c1c6fad2d467668903c6433a5d6dc3175e8329f8f5993448d0451b3f8543942186459460c1ac9ea98b6637b3f21d8303dda1cfcd3273882194913eb2f9b65251425818b2263c923bbdaed8bda217907017b13336585fc2062bc230266fa37fbf6aed74f50b8edc075b481b35381c453137f235fb9c45d3407a99dc9e6861da605a34e639c4cfe6d9b48ef42f7c035ffe5dc1bce8a2cedede53fa64448004fadeaf41bc687c1933bd77624133ca79e0703eeee063a69f8</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年09月27日 19:57</p>
-        <p>原始链接： <a class="post-url" href="/2019/07/31/【XJOI】数字转换/" title="【XJOI】数字转换">http://oierlin.cf/2019/07/31/【XJOI】数字转换/</a></p>
+        <p>最后更新： 2019年10月21日 16:37</p>
+        <p>原始链接： <a class="post-url" href="/2019/08/07/校门外的树/" title="校门外的树">http://oierlin.cf/2019/08/07/校门外的树/</a></p>
         <footer>
             <a href="http://oierlin.cf">
                 <img src="/images/logo.jpg" alt="Lin Jiale">
@@ -229,7 +226,7 @@ daovoice('update');
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://oierlin.cf/2019/07/31/【XJOI】数字转换/&title=《【XJOI】数字转换》 — Oblivion&pic=https://i.postimg.cc/nLKQwqyB/XJOI.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://oierlin.cf/2019/08/07/校门外的树/&title=《校门外的树》 — Oblivion&pic=https://i.postimg.cc/j5ssX1Y0/XJOI.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -239,22 +236,22 @@ daovoice('update');
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://oierlin.cf/2019/07/31/【XJOI】数字转换/&title=《【XJOI】数字转换》 — Oblivion&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://oierlin.cf/2019/08/07/校门外的树/&title=《校门外的树》 — Oblivion&source=此文章被加密，请输入密码查看。" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://oierlin.cf/2019/07/31/【XJOI】数字转换/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://oierlin.cf/2019/08/07/校门外的树/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《【XJOI】数字转换》 — Oblivion&url=http://oierlin.cf/2019/07/31/【XJOI】数字转换/&via=http://oierlin.cf" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《校门外的树》 — Oblivion&url=http://oierlin.cf/2019/08/07/校门外的树/&via=http://oierlin.cf" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://oierlin.cf/2019/07/31/【XJOI】数字转换/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://oierlin.cf/2019/08/07/校门外的树/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -264,7 +261,7 @@ daovoice('update');
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://oierlin.cf/2019/07/31/【XJOI】数字转换/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://oierlin.cf/2019/08/07/校门外的树/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -287,28 +284,22 @@ daovoice('update');
 </article>
 
 
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数字转换"><span class="post-toc-text">数字转换</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#题目描述："><span class="post-toc-text">题目描述：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#输入格式："><span class="post-toc-text">输入格式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#输出格式："><span class="post-toc-text">输出格式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#样例输入："><span class="post-toc-text">样例输入：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#样例输出："><span class="post-toc-text">样例输出：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#数据范围："><span class="post-toc-text">数据范围：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#时间限制："><span class="post-toc-text">时间限制：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#空间限制："><span class="post-toc-text">空间限制：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#提示："><span class="post-toc-text">提示：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题解"><span class="post-toc-text">题解</span></a></li></ol>
-        </nav>
-    </aside>
-    
 
 <nav id="article-nav">
   
-    <a href="/2019/08/01/【HGOI】物品选取/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/07/【ZJOI2003】密码机/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          【HGOI】物品选取
+          【ZJOI2003】密码机
         
       </span>
     </a>
   
   
-    <a href="/2019/07/30/【温州中学】好朋友/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">【温州中学】好朋友</span>
+    <a href="/2019/08/06/【洛谷P1858】多人背包/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">【洛谷P1858】多人背包</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
